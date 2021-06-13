@@ -1,0 +1,436 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{F5BB8BD4-789E-4E79-B203-EADADC10A936}</ProjectGuid>
+    <RootNamespace>simulation</RootNamespace>
+    <Keyword>Win32Proj</Keyword>
+    <WindowsTargetPlatformVersion>10.0.15063.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.30319.1</_ProjectFileVersion>
+    <OutDir>$(SolutionDir)$(Configuration)/$(ProjectName)/</OutDir>
+    <IntDir>$(SolutionDir)obj/$(Configuration)/$(ProjectName)/</IntDir>
+    <PostBuildEventUseInBuild>false</PostBuildEventUseInBuild>
+    <IncludePath>$(IncludePath);$(SolutionDir)\ROOTMAP.Core</IncludePath>
+    <LibraryPath>$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <AdditionalOptions>/wd4820  /wd4668 /Qpar-report:2 %(AdditionalOptions)</AdditionalOptions>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>$(SolutionDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WXUSINGDLL;NOPCH;WIN32;_UNICODE;_WINDOWS;LOG4CPP_FIX_ERROR_COLLISION=1;_LIB;_DEBUG;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessToFile>false</PreprocessToFile>
+      <PreprocessSuppressLineNumbers>false</PreprocessSuppressLineNumbers>
+      <MinimalRebuild>false</MinimalRebuild>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <WarningLevel>Level4</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <PrecompiledHeaderFile>
+      </PrecompiledHeaderFile>
+      <StringPooling>true</StringPooling>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <EnableParallelCodeGeneration>true</EnableParallelCodeGeneration>
+      <TreatWarningAsError />
+    </ClCompile>
+    <Lib>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <TargetMachine>MachineX86</TargetMachine>
+      <LinkTimeCodeGeneration>true</LinkTimeCodeGeneration>
+      <IgnoreAllDefaultLibraries>false</IgnoreAllDefaultLibraries>
+      <IgnoreSpecificDefaultLibraries>libcmt.lib</IgnoreSpecificDefaultLibraries>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <PreprocessorDefinitions>WXUSINGDLL;NOPCH;WIN32;_UNICODE;_WINDOWS;LOG4CPP_FIX_ERROR_COLLISION=1;_LIB;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <WarningLevel>Level4</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <GenerateXMLDocumentationFiles>false</GenerateXMLDocumentationFiles>
+      <Optimization>Full</Optimization>
+      <AdditionalIncludeDirectories>$(SolutionDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <StringPooling>true</StringPooling>
+      <BasicRuntimeChecks>Default</BasicRuntimeChecks>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <TreatWarningAsError />
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
+      <WholeProgramOptimization>false</WholeProgramOptimization>
+      <EnableParallelCodeGeneration>true</EnableParallelCodeGeneration>
+      <AdditionalOptions>/Qpar-report:2 %(AdditionalOptions)</AdditionalOptions>
+      <PrecompiledHeaderFile />
+    </ClCompile>
+    <Lib>
+      <IgnoreSpecificDefaultLibraries>libcmt.lib</IgnoreSpecificDefaultLibraries>
+      <AdditionalDependencies>
+      </AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <OutputFile>$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
+      <IgnoreAllDefaultLibraries>false</IgnoreAllDefaultLibraries>
+      <LinkTimeCodeGeneration>true</LinkTimeCodeGeneration>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Lib>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="common\IdentifierUtility.cpp" />
+    <ClCompile Include="common\ScoreboardProcessInitialisers.cpp" />
+    <ClCompile Include="common\SimulationEngine.cpp" />
+    <ClCompile Include="common\SprintUtility.cpp" />
+    <ClCompile Include="data_access\common\ConfigurationDataStore.cpp" />
+    <ClCompile Include="data_access\common\DataAccessManager.cpp" />
+    <ClCompile Include="data_access\common\DataPreviewer.cpp" />
+    <ClCompile Include="data_access\common\NameLocationData.cpp" />
+    <ClCompile Include="data_access\common\OutputDataPreviewer.cpp" />
+    <ClCompile Include="data_access\common\PlantDataPreviewer.cpp" />
+    <ClCompile Include="data_access\common\PostOfficeDataPreviewer.cpp" />
+    <ClCompile Include="data_access\common\ProcessDataPreviewer.cpp" />
+    <ClCompile Include="data_access\common\ScoreboardDataPreviewer.cpp" />
+    <ClCompile Include="data_access\common\SharedAttributeDataPreviewer.cpp" />
+    <ClCompile Include="data_access\common\VolumeObjectDataPreviewer.cpp" />
+    <ClCompile Include="data_access\common\WindowDataPreviewer.cpp" />
+    <ClCompile Include="data_access\tinyxmlconfig\TXCharacteristicDA.cpp" />
+    <ClCompile Include="data_access\tinyxmlconfig\TXConfigurationDataStore.cpp" />
+    <ClCompile Include="data_access\tinyxmlconfig\TXDataAccessManager.cpp" />
+    <ClCompile Include="data_access\tinyxmlconfig\TXDataWriter.cpp" />
+    <ClCompile Include="data_access\tinyxmlconfig\TXOutputRuleDA.cpp" />
+    <ClCompile Include="data_access\tinyxmlconfig\TXPlantDA.cpp" />
+    <ClCompile Include="data_access\tinyxmlconfig\TXPostOfficeDA.cpp" />
+    <ClCompile Include="data_access\tinyxmlconfig\TXProcessDA.cpp" />
+    <ClCompile Include="data_access\tinyxmlconfig\TXProcessSpecialDA.cpp" />
+    <ClCompile Include="data_access\tinyxmlconfig\TXScoreboardDA.cpp" />
+    <ClCompile Include="data_access\tinyxmlconfig\TXScoreboardDataDA.cpp" />
+    <ClCompile Include="data_access\tinyxmlconfig\TXTableDA.cpp" />
+    <ClCompile Include="data_access\tinyxmlconfig\TXUtility.cpp" />
+    <ClCompile Include="data_access\tinyxmlconfig\TXViewDA.cpp" />
+    <ClCompile Include="data_access\dummyconfig\DummyCharacteristicDA.cpp" />
+    <ClCompile Include="data_access\dummyconfig\DummyConfigurationDataStore.cpp" />
+    <ClCompile Include="data_access\dummyconfig\DummyDataAccessManager.cpp" />
+    <ClCompile Include="data_access\dummyconfig\DummyOutputRuleDA.cpp" />
+    <ClCompile Include="data_access\dummyconfig\DummyPlantDA.cpp" />
+    <ClCompile Include="data_access\dummyconfig\DummyPlantSummaryDA.cpp" />
+    <ClCompile Include="data_access\dummyconfig\DummyPlantTypeDA.cpp" />
+    <ClCompile Include="data_access\dummyconfig\DummyPostOfficeDA.cpp" />
+    <ClCompile Include="data_access\dummyconfig\DummyProcessDA.cpp" />
+    <ClCompile Include="data_access\dummyconfig\DummyProcessInitialisationDA.cpp" />
+    <ClCompile Include="data_access\dummyconfig\DummyProcessNothing.cpp" />
+    <ClCompile Include="data_access\dummyconfig\DummyProcessSpecialDA.cpp" />
+    <ClCompile Include="data_access\dummyconfig\DummyProcessWith2Characteristics.cpp" />
+    <ClCompile Include="data_access\dummyconfig\DummyScoreboardDA.cpp" />
+    <ClCompile Include="data_access\dummyconfig\DummySimulationEngineDA.cpp" />
+    <ClCompile Include="data_access\dummyconfig\DummyTableDA.cpp" />
+    <ClCompile Include="data_access\dummyconfig\DummyViewDA.cpp" />
+    <ClCompile Include="data_access\input_scheme_parser\InputSchemeParser.cpp" />
+    <ClCompile Include="data_access\input_scheme_parser\InputSchemeParser.tab.c">
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="data_access\input_scheme_parser\lex.yy.c">
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="data_access\input_scheme_parser\RmBisonAdapter.cpp" />
+    <ClCompile Include="file\output\BinaryDataOutputFile.cpp" />
+    <ClCompile Include="file\output\DataOutputCoordinator.cpp" />
+    <ClCompile Include="file\output\DataOutputFile.cpp" />
+    <ClCompile Include="file\output\NonSpatialDataOutputStrategy.cpp" />
+    <ClCompile Include="file\output\OutputFileAlarm.cpp" />
+    <ClCompile Include="file\output\OutputRule.cpp" />
+    <ClCompile Include="file\output\OutputStrategy.cpp" />
+    <ClCompile Include="file\output\OutputTimingStrategy.cpp" />
+    <ClCompile Include="file\output\RaytracerDataOutputStrategy.cpp" />
+    <ClCompile Include="file\output\ScoreboardDataOutputStrategy.cpp" />
+    <ClCompile Include="process\common\CharacteristicDescriptor.cpp" />
+    <ClCompile Include="process\common\IProcessIterationUser.cpp" />
+    <ClCompile Include="process\common\Process.cpp" />
+    <ClCompile Include="process\common\ProcessCoordinator.cpp" />
+    <ClCompile Include="process\common\ProcessExceptions.cpp" />
+    <ClCompile Include="process\common\ProcessGroupLeader.cpp" />
+    <ClCompile Include="process\common\ProcessList.cpp" />
+    <ClCompile Include="process\common\ProcessModuleBase.cpp" />
+    <ClCompile Include="process\common\ProcessUtility.cpp" />
+    <ClCompile Include="process\interprocess_communication\InterprocessDataDescriptor.cpp" />
+    <ClCompile Include="process\interprocess_communication\InterprocessDescriptorList.cpp" />
+    <ClCompile Include="process\interprocess_communication\Message.cpp" />
+    <ClCompile Include="process\interprocess_communication\MessageList.cpp" />
+    <ClCompile Include="process\interprocess_communication\PostOffice.cpp" />
+    <ClCompile Include="process\interprocess_communication\ProcessActionDescriptor.cpp" />
+    <ClCompile Include="process\modules\BoundingCylinder.cpp" />
+    <ClCompile Include="process\modules\BoundingRectangularPrism.cpp" />
+    <ClCompile Include="process\modules\DrawingDemonstration.cpp" />
+    <ClCompile Include="process\modules\Nitrate.cpp" />
+    <ClCompile Include="process\modules\OrganicMatter.cpp" />
+    <ClCompile Include="process\modules\OrganicMatterInput.cpp" />
+    <ClCompile Include="process\modules\Phosphorus.cpp" />
+    <ClCompile Include="process\modules\VolumeObjectCoordinator.cpp" />
+    <ClCompile Include="process\modules\Water.cpp" />
+    <ClCompile Include="process\plant\Axis.cpp" />
+    <ClCompile Include="process\plant\Branch.cpp" />
+    <ClCompile Include="process\plant\Plant.cpp" />
+    <ClCompile Include="process\plant\Plant_DynamicResAllocToRoots.cpp" />
+    <ClCompile Include="process\plant\PlantCalculations.cpp" />
+    <ClCompile Include="process\plant\PlantCoordinator.cpp" />
+    <ClCompile Include="process\plant\PlantSummary.cpp" />
+    <ClCompile Include="process\plant\PlantSummaryHelper.cpp" />
+    <ClCompile Include="process\plant\PlantSummaryRegistration.cpp" />
+    <ClCompile Include="process\plant\PlantSummarySupplier.cpp" />
+    <ClCompile Include="process\plant\PlantType.cpp" />
+    <ClCompile Include="process\plant\PossibleAxis.cpp" />
+    <ClCompile Include="process\plant\RootTip.cpp" />
+    <ClCompile Include="process\shared_attributes\PlantSharedAttributeSupport.cpp" />
+    <ClCompile Include="process\shared_attributes\ProcessAttributeSupplier.cpp" />
+    <ClCompile Include="process\shared_attributes\ProcessSharedAttributeOwner.cpp" />
+    <ClCompile Include="process\shared_attributes\ScoreboardAttributeSupplier.cpp" />
+    <ClCompile Include="process\shared_attributes\SharedAttribute.cpp" />
+    <ClCompile Include="process\shared_attributes\SharedAttributeFamily.cpp" />
+    <ClCompile Include="process\shared_attributes\SharedAttributeIteratorAssistant.cpp" />
+    <ClCompile Include="process\shared_attributes\SharedAttributeManager.cpp" />
+    <ClCompile Include="process\shared_attributes\SharedAttributeOwner.cpp" />
+    <ClCompile Include="process\shared_attributes\SharedAttributeRegistrar.cpp" />
+    <ClCompile Include="process\shared_attributes\SharedAttributeSearchHelper.cpp" />
+    <ClCompile Include="process\shared_attributes\SharedAttributeSupplier.cpp" />
+    <ClCompile Include="process\shared_attributes\SharedAttributeVariation.cpp" />
+    <ClCompile Include="process\raytrace\RaytracerData.cpp" />
+    <ClCompile Include="process\raytrace\RaytracerDataAccessor.cpp" />
+    <ClCompile Include="process\raytrace\RenderCoordinator.cpp" />
+    <ClCompile Include="process\raytrace\ScoreboardColourInfo.cpp" />
+    <ClCompile Include="process\raytrace\ScoreboardRenderer.cpp" />
+    <ClCompile Include="scoreboard\DimensionIterator.cpp" />
+    <ClCompile Include="scoreboard\DimensionOrder.cpp" />
+    <ClCompile Include="scoreboard\IScoreboardIterationUser.cpp" />
+    <ClCompile Include="scoreboard\Scoreboard.cpp" />
+    <ClCompile Include="scoreboard\ScoreboardCoordinator.cpp" />
+    <ClCompile Include="data_persistence\common\DataPersistenceManager.cpp" />
+    <ClCompile Include="data_persistence\common\DirectoryData.cpp" />
+    <ClCompile Include="data_persistence\common\PersistedDataDirectory.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="common\IdentifierUtility.h" />
+    <ClInclude Include="common\ISimulationActivityObserver.h" />
+    <ClInclude Include="common\ScoreboardProcessInitialisers.h" />
+    <ClInclude Include="common\SimulationEngine.h" />
+    <ClInclude Include="common\SprintUtility.h" />
+    <ClInclude Include="common\Types.h" />
+    <ClInclude Include="data_access\common\ConfigurationDataStore.h" />
+    <ClInclude Include="data_access\common\DataAccessManager.h" />
+    <ClInclude Include="data_access\common\DataPreviewer.h" />
+    <ClInclude Include="data_access\common\IDataAccessUser.h" />
+    <ClInclude Include="data_access\common\ITableDataUser.h" />
+    <ClInclude Include="data_access\common\IViewDataUser.h" />
+    <ClInclude Include="data_access\common\NameLocationData.h" />
+    <ClInclude Include="data_access\common\OutputDataPreviewer.h" />
+    <ClInclude Include="data_access\common\PlantDataPreviewer.h" />
+    <ClInclude Include="data_access\common\PostOfficeDataPreviewer.h" />
+    <ClInclude Include="data_access\common\ProcessDataPreviewer.h" />
+    <ClInclude Include="data_access\common\ScoreboardDataPreviewer.h" />
+    <ClInclude Include="data_access\common\SharedAttributeDataPreviewer.h" />
+    <ClInclude Include="data_access\common\VolumeObjectDataPreviewer.h" />
+    <ClInclude Include="data_access\common\WindowDataPreviewer.h" />
+    <ClInclude Include="data_access\interface\CharacteristicDAI.h" />
+    <ClInclude Include="data_access\interface\OutputRuleDAI.h" />
+    <ClInclude Include="data_access\interface\PlantDAI.h" />
+    <ClInclude Include="data_access\interface\PlantSummaryDAI.h" />
+    <ClInclude Include="data_access\interface\PlantTypeDAI.h" />
+    <ClInclude Include="data_access\interface\PostOfficeDAI.h" />
+    <ClInclude Include="data_access\interface\ProcessDAI.h" />
+    <ClInclude Include="data_access\interface\ProcessInitialisationDAI.h" />
+    <ClInclude Include="data_access\interface\ProcessSpecialDAI.h" />
+    <ClInclude Include="data_access\interface\ScoreboardDAI.h" />
+    <ClInclude Include="data_access\interface\ScoreboardDataDAI.h" />
+    <ClInclude Include="data_access\interface\SharedAttributeDAI.h" />
+    <ClInclude Include="data_access\interface\SimulationEngineDAI.h" />
+    <ClInclude Include="data_access\interface\TableDAI.h" />
+    <ClInclude Include="data_access\interface\ViewDAI.h" />
+    <ClInclude Include="data_access\tinyxmlconfig\TXCharacteristicDA.h" />
+    <ClInclude Include="data_access\tinyxmlconfig\TXConfigurationDataStore.h" />
+    <ClInclude Include="data_access\tinyxmlconfig\TXDataAccessManager.h" />
+    <ClInclude Include="data_access\tinyxmlconfig\TXDataWriter.h" />
+    <ClInclude Include="data_access\tinyxmlconfig\TXOutputRuleDA.h" />
+    <ClInclude Include="data_access\tinyxmlconfig\TXPlantDA.h" />
+    <ClInclude Include="data_access\tinyxmlconfig\TXPostOfficeDA.h" />
+    <ClInclude Include="data_access\tinyxmlconfig\TXProcessDA.h" />
+    <ClInclude Include="data_access\tinyxmlconfig\TXProcessSpecialDA.h" />
+    <ClInclude Include="data_access\tinyxmlconfig\TXScoreboardDA.h" />
+    <ClInclude Include="data_access\tinyxmlconfig\TXScoreboardDataDA.h" />
+    <ClInclude Include="data_access\tinyxmlconfig\TXTableDA.h" />
+    <ClInclude Include="data_access\tinyxmlconfig\TXUtility.h" />
+    <ClInclude Include="data_access\tinyxmlconfig\TXViewDA.h" />
+    <ClInclude Include="data_access\dummyconfig\DummyCharacteristicDA.h" />
+    <ClInclude Include="data_access\dummyconfig\DummyConfigurationDataStore.h" />
+    <ClInclude Include="data_access\dummyconfig\DummyDataAccessManager.h" />
+    <ClInclude Include="data_access\dummyconfig\DummyOutputRuleDA.h" />
+    <ClInclude Include="data_access\dummyconfig\DummyPlantDA.h" />
+    <ClInclude Include="data_access\dummyconfig\DummyPlantSummaryDA.h" />
+    <ClInclude Include="data_access\dummyconfig\DummyPlantTypeDA.h" />
+    <ClInclude Include="data_access\dummyconfig\DummyPostOfficeDA.h" />
+    <ClInclude Include="data_access\dummyconfig\DummyProcessDA.h" />
+    <ClInclude Include="data_access\dummyconfig\DummyProcessInitialisationDA.h" />
+    <ClInclude Include="data_access\dummyconfig\DummyProcessNothing.h" />
+    <ClInclude Include="data_access\dummyconfig\DummyProcessSpecialDA.h" />
+    <ClInclude Include="data_access\dummyconfig\DummyProcessWith2Characteristics.h" />
+    <ClInclude Include="data_access\dummyconfig\DummyScoreboardDA.h" />
+    <ClInclude Include="data_access\dummyconfig\DummySimulationEngineDA.h" />
+    <ClInclude Include="data_access\dummyconfig\DummyTableDA.h" />
+    <ClInclude Include="data_access\dummyconfig\DummyViewDA.h" />
+    <ClInclude Include="data_access\input_scheme_parser\InputSchemeParser.h" />
+    <ClInclude Include="data_access\input_scheme_parser\InputSchemeParser.tab.h" />
+    <ClInclude Include="data_access\input_scheme_parser\RmBisonAdapter.h" />
+    <ClInclude Include="file\output\BinaryDataOutputFile.h" />
+    <ClInclude Include="file\output\DataOutputCoordinator.h" />
+    <ClInclude Include="file\output\DataOutputFile.h" />
+    <ClInclude Include="file\output\NonSpatialDataOutputStrategy.h" />
+    <ClInclude Include="file\output\OutputFileAlarm.h" />
+    <ClInclude Include="file\output\OutputRule.h" />
+    <ClInclude Include="file\output\OutputStrategy.h" />
+    <ClInclude Include="file\output\OutputTimingStrategy.h" />
+    <ClInclude Include="file\output\RaytracerDataOutputStrategy.h" />
+    <ClInclude Include="file\output\ScoreboardDataOutputStrategy.h" />
+    <ClInclude Include="file\output\ViewCaptureOutputStrategy.h" />
+    <ClInclude Include="process\common\CharacteristicDescriptor.h" />
+    <ClInclude Include="process\common\IProcessIterationUser.h" />
+    <ClInclude Include="process\common\Process.h" />
+    <ClInclude Include="process\common\Process_Dictionary.h" />
+    <ClInclude Include="process\common\ProcessCoordinator.h" />
+    <ClInclude Include="process\common\ProcessDrawing.h" />
+    <ClInclude Include="process\common\ProcessExceptions.h" />
+    <ClInclude Include="process\common\ProcessGroupLeader.h" />
+    <ClInclude Include="process\common\ProcessList.h" />
+    <ClInclude Include="process\common\ProcessModuleBase.h" />
+    <ClInclude Include="process\common\ProcessUtility.h" />
+    <ClInclude Include="process\interprocess_communication\InterprocessDataDescriptor.h" />
+    <ClInclude Include="process\interprocess_communication\InterprocessDescriptorList.h" />
+    <ClInclude Include="process\interprocess_communication\Message.h" />
+    <ClInclude Include="process\interprocess_communication\MessageList.h" />
+    <ClInclude Include="process\interprocess_communication\PostOffice.h" />
+    <ClInclude Include="process\interprocess_communication\ProcessActionDescriptor.h" />
+    <ClInclude Include="process\modules\BoundingCylinder.h" />
+    <ClInclude Include="process\modules\BoundingRectangularPrism.h" />
+    <ClInclude Include="process\modules\DrawingDemonstration.h" />
+    <ClInclude Include="process\modules\Nitrate.h" />
+    <ClInclude Include="process\modules\OrganicMatter.h" />
+    <ClInclude Include="process\modules\OrganicMatterInput.h" />
+    <ClInclude Include="process\modules\Phosphorus.h" />
+    <ClInclude Include="process\modules\VolumeObject.h" />
+    <ClInclude Include="process\modules\VolumeObjectCoordinator.h" />
+    <ClInclude Include="process\modules\Water.h" />
+    <ClInclude Include="process\plant\Axis.h" />
+    <ClInclude Include="process\plant\Branch.h" />
+    <ClInclude Include="process\plant\Plant.h" />
+    <ClInclude Include="process\plant\PlantCalculations.h" />
+    <ClInclude Include="process\plant\PlantCoordinator.h" />
+    <ClInclude Include="process\plant\PlantSummary.h" />
+    <ClInclude Include="process\plant\PlantSummaryHelper.h" />
+    <ClInclude Include="process\plant\PlantSummaryRegistration.h" />
+    <ClInclude Include="process\plant\PlantSummarySupplier.h" />
+    <ClInclude Include="process\plant\PlantType.h" />
+    <ClInclude Include="process\plant\PossibleAxis.h" />
+    <ClInclude Include="process\plant\RootTip.h" />
+    <ClInclude Include="process\shared_attributes\PlantSharedAttributeSupport.h" />
+    <ClInclude Include="process\shared_attributes\ProcessAttributeSupplier.h" />
+    <ClInclude Include="process\shared_attributes\ProcessSharedAttribute.h" />
+    <ClInclude Include="process\shared_attributes\ProcessSharedAttributeOwner.h" />
+    <ClInclude Include="process\shared_attributes\ScoreboardAttributeSupplier.h" />
+    <ClInclude Include="process\shared_attributes\ScoreboardSharedAttribute.h" />
+    <ClInclude Include="process\shared_attributes\SharedAttribute.h" />
+    <ClInclude Include="process\shared_attributes\SharedAttributeCommon.h" />
+    <ClInclude Include="process\shared_attributes\SharedAttributeFamily.h" />
+    <ClInclude Include="process\shared_attributes\SharedAttributeIteratorAssistant.h" />
+    <ClInclude Include="process\shared_attributes\SharedAttributeManager.h" />
+    <ClInclude Include="process\shared_attributes\SharedAttributeOwner.h" />
+    <ClInclude Include="process\shared_attributes\SharedAttributeRegistrar.h" />
+    <ClInclude Include="process\shared_attributes\SharedAttributeSearchHelper.h" />
+    <ClInclude Include="process\shared_attributes\SharedAttributeSupplier.h" />
+    <ClInclude Include="process\shared_attributes\SharedAttributeVariation.h" />
+    <ClInclude Include="process\raytrace\RaytracerData.h" />
+    <ClInclude Include="process\raytrace\RaytracerDataAccessor.h" />
+    <ClInclude Include="process\raytrace\RenderCoordinator.h" />
+    <ClInclude Include="process\raytrace\ScoreboardColourInfo.h" />
+    <ClInclude Include="process\raytrace\ScoreboardRenderer.h" />
+    <ClInclude Include="scoreboard\DimensionIterator.h" />
+    <ClInclude Include="scoreboard\DimensionOrder.h" />
+    <ClInclude Include="scoreboard\IScoreboardIterationUser.h" />
+    <ClInclude Include="scoreboard\Scoreboard.h" />
+    <ClInclude Include="scoreboard\ScoreboardCollaboration.h" />
+    <ClInclude Include="scoreboard\ScoreboardCoordinator.h" />
+    <ClInclude Include="scoreboard\ScoreboardDependencyIterator.h" />
+    <ClInclude Include="scoreboard\ScoreboardFlags.h" />
+    <ClInclude Include="data_persistence\interface\CharacteristicDPI.h" />
+    <ClInclude Include="data_persistence\interface\OutputRuleDPI.h" />
+    <ClInclude Include="data_persistence\interface\PlantDPI.h" />
+    <ClInclude Include="data_persistence\interface\PlantSummaryDPI.h" />
+    <ClInclude Include="data_persistence\interface\PlantTypeDPI.h" />
+    <ClInclude Include="data_persistence\interface\PostOfficeDPI.h" />
+    <ClInclude Include="data_persistence\interface\ProcessDPI.h" />
+    <ClInclude Include="data_persistence\interface\ProcessSpecialDPI.h" />
+    <ClInclude Include="data_persistence\interface\ScoreboardDataDPI.h" />
+    <ClInclude Include="data_persistence\interface\ScoreboardDPI.h" />
+    <ClInclude Include="data_persistence\interface\SharedAttributeDPI.h" />
+    <ClInclude Include="data_persistence\interface\TableDPI.h" />
+    <ClInclude Include="data_persistence\interface\ViewDPI.h" />
+    <ClInclude Include="data_persistence\common\DataPersistenceManager.h" />
+    <ClInclude Include="data_persistence\common\DirectoryData.h" />
+    <ClInclude Include="data_persistence\common\ITableDataMaintainer.h" />
+    <ClInclude Include="data_persistence\common\IViewDataMaintainer.h" />
+    <ClInclude Include="data_persistence\common\PersistedDataDirectory.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="data_access\input_scheme_parser\InputSchemeParser.y">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+      <Message>Compiling Bison Grammar %(Filename)%(Extension)</Message>
+      <Command>echo %(RootDir)%(Directory)%3b
+c:\cygwin\bin\bash.exe -c %27/usr/bin/bison --verbose --debug -d `/usr/bin/realpath "%(FullPath)" ` %27%3b
+move $(ProjectDir)\%(Filename).* %(RootDir)%(Directory)%3b
+</Command>
+      <AdditionalInputs>%(RootDir)%(Directory)lex.yy.c;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs>%(RootDir)%(Directory)%(Filename).tab.c;%(RootDir)%(Directory)%(Filename).tab.h;%(RootDir)%(Directory)%(Filename).output;%(Outputs)</Outputs>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\core\core.vcxproj">
+      <Project>{c12e8aa3-f9ac-42b3-9b45-2d5e5f53eb61}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+    <Import Project="..\..\packages\log4cpp.1.1.3\build\log4cpp.targets" Condition="Exists('..\..\packages\log4cpp.1.1.3\build\log4cpp.targets')" />
+    <Import Project="..\..\packages\boost.1.72.0.0\build\boost.targets" Condition="Exists('..\..\packages\boost.1.72.0.0\build\boost.targets')" />
+  </ImportGroup>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\..\packages\log4cpp.1.1.3\build\log4cpp.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\..\packages\log4cpp.1.1.3\build\log4cpp.targets'))" />
+    <Error Condition="!Exists('..\..\packages\boost.1.72.0.0\build\boost.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\..\packages\boost.1.72.0.0\build\boost.targets'))" />
+  </Target>
+</Project>

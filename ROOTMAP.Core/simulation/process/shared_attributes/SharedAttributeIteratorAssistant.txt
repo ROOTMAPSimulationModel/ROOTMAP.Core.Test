@@ -1,0 +1,113 @@
+Here we assume the presence of a small number of SharedAttribute Characteristics.
+
+    Nitrate Uptake Plant1
+    Nitrate Uptake Plant2
+    Nitrate Uptake Plant3
+    Nitrate Uptake Plant4
+    Water Uptake Plant1
+    Water Uptake Plant2
+    Water Uptake Plant3
+    Water Uptake Plant4
+    Phosphorus Uptake Plant1
+    Phosphorus Uptake Plant2
+    Phosphorus Uptake Plant3
+    Phosphorus Uptake Plant4
+    Tip Growth Duration RootOrder0
+    Tip Growth Duration RootOrder1
+    Tip Growth Duration RootOrder2
+    Tip Growth Duration RootOrder3
+    First Seminal Probability PlantType1
+    First Seminal Probability PlantType2
+    Growth Rate Max Plant1 RootOrder0
+    Growth Rate Max Plant1 RootOrder1
+    Growth Rate Max Plant1 RootOrder2
+    Growth Rate Max Plant1 RootOrder3
+    Growth Rate Max Plant2 RootOrder0
+    Growth Rate Max Plant2 RootOrder1
+    Growth Rate Max Plant2 RootOrder2
+    Growth Rate Max Plant2 RootOrder3
+    Growth Rate Max Plant3 RootOrder0
+    Growth Rate Max Plant3 RootOrder1
+    Growth Rate Max Plant3 RootOrder2
+    Growth Rate Max Plant3 RootOrder3
+    Growth Rate Max Plant4 RootOrder0
+    Growth Rate Max Plant4 RootOrder1
+    Growth Rate Max Plant4 RootOrder2
+    Growth Rate Max Plant4 RootOrder3
+
+These can be stored grouped by CharacteristicDescriptor (SharedAttributeFamily)
+
+
+The downside of which is how to then access them by Plant when a ProcessModule
+is desirous of such, for instance when the Nitrate process attempts to do its
+stuff by iterating through the Plants.
+
+Here is how the characteristics would need to be arranged :
+
+    Nitrate Uptake Plant1
+    Water Uptake Plant1
+    Phosphorus Uptake Plant1
+    Growth Rate Max Plant1 RootOrder0
+    Growth Rate Max Plant1 RootOrder1
+    Growth Rate Max Plant1 RootOrder2
+    Growth Rate Max Plant1 RootOrder3
+
+
+    Nitrate Uptake Plant2
+    Water Uptake Plant2
+    Phosphorus Uptake Plant2
+    Growth Rate Max Plant2 RootOrder0
+    Growth Rate Max Plant2 RootOrder1
+    Growth Rate Max Plant2 RootOrder2
+    Growth Rate Max Plant2 RootOrder3
+
+
+    Nitrate Uptake Plant3
+    Water Uptake Plant3
+    Phosphorus Uptake Plant3
+    Growth Rate Max Plant3 RootOrder0
+    Growth Rate Max Plant3 RootOrder1
+    Growth Rate Max Plant3 RootOrder2
+    Growth Rate Max Plant3 RootOrder3
+
+
+    Nitrate Uptake Plant4
+    Water Uptake Plant4
+    Phosphorus Uptake Plant4
+    Growth Rate Max Plant4 RootOrder0
+    Growth Rate Max Plant4 RootOrder1
+    Growth Rate Max Plant4 RootOrder2
+    Growth Rate Max Plant4 RootOrder3
+
+
+    Tip Growth Duration RootOrder0
+    Tip Growth Duration RootOrder1
+    Tip Growth Duration RootOrder2
+    Tip Growth Duration RootOrder3
+
+    First Seminal Probability PlantType1
+    First Seminal Probability PlantType2
+
+There are two effects of this arrangement which need to be catered for:
+
+Q1: How does the calling/using/client process gain access to each characteristic
+    within the "aggregate" ?   I can see two possible solutions.
+    a - By index, with initialisation of indices in the "Initialise" message of
+        the process module, similarly to how scoreboard indices are currently
+        initialised.
+    b - by pointer, with initialisation done in the plant loop.  This would be
+        practical in situations where only a few (two or three) plant-dependent
+        characteristics are used.
+A1: by solution a)
+
+
+Q2: How do we aggregate and access the by-PlantType and global by-RootOrder
+    characteristics on a by-Plant basis ?
+A2: by forming seperate attributes, also see Q3
+
+
+Q3: Do we also aggregate by-PlantType and by-RootOrder, ie. by each registered
+    variation ?
+A3: Yes, we should. This also answer
+
+

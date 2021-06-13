@@ -1,0 +1,178 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="log">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx;h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx</Extensions>
+    </Filter>
+    <Filter Include="scoreboard">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx;h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="utility">
+      <UniqueIdentifier>{eda60815-d102-45fb-8d4f-10a351e647d3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="common">
+      <UniqueIdentifier>{6804b57f-3f12-463b-8d5a-b5f429120b75}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="macos_compatibility">
+      <UniqueIdentifier>{5777e280-b3f9-413b-927c-94ba2ddec96b}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="log\Logger.cpp">
+      <Filter>log</Filter>
+    </ClCompile>
+    <ClCompile Include="log\Tracer.cpp">
+      <Filter>log</Filter>
+    </ClCompile>
+    <ClCompile Include="scoreboard\BoundaryArray.cpp">
+      <Filter>scoreboard</Filter>
+    </ClCompile>
+    <ClCompile Include="scoreboard\Dimension.cpp">
+      <Filter>scoreboard</Filter>
+    </ClCompile>
+    <ClCompile Include="scoreboard\ScoreboardStratum.cpp">
+      <Filter>scoreboard</Filter>
+    </ClCompile>
+    <ClCompile Include="scoreboard\ScoreboardUtility.cpp">
+      <Filter>scoreboard</Filter>
+    </ClCompile>
+    <ClCompile Include="utility\StringParserUtility.cpp">
+      <Filter>utility</Filter>
+    </ClCompile>
+    <ClCompile Include="utility\Utility.cpp">
+      <Filter>utility</Filter>
+    </ClCompile>
+    <ClCompile Include="common\ClassTemplate.cpp">
+      <Filter>common</Filter>
+    </ClCompile>
+    <ClCompile Include="common\CropSimCommands.cpp">
+      <Filter>common</Filter>
+    </ClCompile>
+    <ClCompile Include="common\DoubleCoordinates.cpp">
+      <Filter>common</Filter>
+    </ClCompile>
+    <ClCompile Include="common\Exceptions.cpp">
+      <Filter>common</Filter>
+    </ClCompile>
+    <ClCompile Include="common\RmAssert.cpp">
+      <Filter>common</Filter>
+    </ClCompile>
+    <ClCompile Include="common\SimplestCrudestHash.cpp">
+      <Filter>common</Filter>
+    </ClCompile>
+    <ClCompile Include="macos_compatibility\CCollaborator.cpp">
+      <Filter>macos_compatibility</Filter>
+    </ClCompile>
+    <ClCompile Include="macos_compatibility\LongCoordinates.cpp">
+      <Filter>macos_compatibility</Filter>
+    </ClCompile>
+    <ClCompile Include="macos_compatibility\MacResourceManager.cpp">
+      <Filter>macos_compatibility</Filter>
+    </ClCompile>
+    <ClCompile Include="utility\RmSHA1.cpp">
+      <Filter>utility</Filter>
+    </ClCompile>
+    <ClCompile Include="common\RmVersion.cpp">
+      <Filter>common</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="utility\Vec3d.h">
+      <Filter>log</Filter>
+    </ClInclude>
+    <ClInclude Include="scoreboard\BoundaryArray.h">
+      <Filter>scoreboard</Filter>
+    </ClInclude>
+    <ClInclude Include="scoreboard\BoundaryArrayExceptions.h">
+      <Filter>scoreboard</Filter>
+    </ClInclude>
+    <ClInclude Include="scoreboard\Dimension.h">
+      <Filter>scoreboard</Filter>
+    </ClInclude>
+    <ClInclude Include="scoreboard\ScoreboardBox.h">
+      <Filter>scoreboard</Filter>
+    </ClInclude>
+    <ClInclude Include="scoreboard\ScoreboardStratum.h">
+      <Filter>scoreboard</Filter>
+    </ClInclude>
+    <ClInclude Include="scoreboard\ScoreboardUtility.h">
+      <Filter>scoreboard</Filter>
+    </ClInclude>
+    <ClInclude Include="utility\StringParserUtility.h">
+      <Filter>utility</Filter>
+    </ClInclude>
+    <ClInclude Include="utility\Utility.h">
+      <Filter>utility</Filter>
+    </ClInclude>
+    <ClInclude Include="common\ClassTemplate.h">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="common\Constants.h">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="common\CropSimCommands.h">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="common\DoubleCoordinates.h">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="common\Exceptions.h">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="common\ExtraStuff.h">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="common\RmAssert.h">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="common\SimplestCrudestHash.h">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="common\structures.h">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="common\Types.h">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="macos_compatibility\CCollaborator.h">
+      <Filter>macos_compatibility</Filter>
+    </ClInclude>
+    <ClInclude Include="macos_compatibility\CropSimStringResources.h">
+      <Filter>macos_compatibility</Filter>
+    </ClInclude>
+    <ClInclude Include="macos_compatibility\LongCoordinates.h">
+      <Filter>macos_compatibility</Filter>
+    </ClInclude>
+    <ClInclude Include="macos_compatibility\macos_compatibility.h">
+      <Filter>macos_compatibility</Filter>
+    </ClInclude>
+    <ClInclude Include="macos_compatibility\MacResourceManager.h">
+      <Filter>macos_compatibility</Filter>
+    </ClInclude>
+    <ClInclude Include="macos_compatibility\MacTypes.h">
+      <Filter>macos_compatibility</Filter>
+    </ClInclude>
+    <ClInclude Include="utility\RmSHA1.h">
+      <Filter>utility</Filter>
+    </ClInclude>
+    <ClInclude Include="log\Logger.h">
+      <Filter>log</Filter>
+    </ClInclude>
+    <ClInclude Include="log\Tracer.h">
+      <Filter>log</Filter>
+    </ClInclude>
+    <ClInclude Include="common\RmVersion.h">
+      <Filter>common</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="version-stamp.ps1" />
+    <None Include="packages.config" />
+  </ItemGroup>
+</Project>

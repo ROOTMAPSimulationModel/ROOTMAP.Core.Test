@@ -1,0 +1,1 @@
+ROOTMAP Core repo - core and simulation projects. Idea is to produce a single library that can be referenced by other projects - e.g. ROOTMAP.Native (the current C++ Windows app), a test and development harness (ROOTMAP.Core.Test), and a proof-of-concept .NET app.

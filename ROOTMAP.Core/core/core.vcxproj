@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{C12E8AA3-F9AC-42B3-9B45-2D5E5F53EB61}</ProjectGuid>
+    <RootNamespace>core</RootNamespace>
+    <Keyword>Win32Proj</Keyword>
+    <WindowsTargetPlatformVersion>10.0.15063.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <PlatformToolset>v141</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.30319.1</_ProjectFileVersion>
+    <OutDir>$(SolutionDir)$(Configuration)/$(ProjectName)/</OutDir>
+    <IntDir>$(SolutionDir)obj/$(Configuration)/$(ProjectName)/</IntDir>
+    <PostBuildEventUseInBuild>true</PostBuildEventUseInBuild>
+    <IncludePath>$(IncludePath);$(SolutionDir)\ROOTMAP.Core</IncludePath>
+    <LibraryPath>$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>$(SolutionDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WXUSINGDLL;NOPCH;WIN32;_UNICODE;_WINDOWS;_LIB;LOG4CPP_FIX_ERROR_COLLISION=1;NOMINMAX;_DEBUG;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>false</MinimalRebuild>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <WarningLevel>Level4</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <StringPooling>true</StringPooling>
+      <PrecompiledHeaderFile />
+    </ClCompile>
+    <Lib>
+      <IgnoreSpecificDefaultLibraries>libcmt.lib</IgnoreSpecificDefaultLibraries>
+      <AdditionalDependencies>
+      </AdditionalDependencies>
+    </Lib>
+    <PreBuildEvent>
+      <Command>powershell.exe -ExecutionPolicy Bypass -NoProfile -NonInteractive -File version-stamp.ps1</Command>
+    </PreBuildEvent>
+    <PostBuildEvent>
+      <Message>Copy log config files to build directory</Message>
+      <Command>xcopy /Y $(SolutionDir)*.cfg $(TargetDir)..</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <PreprocessorDefinitions>WXUSINGDLL;NOPCH;WIN32;_UNICODE;_WINDOWS;_LIB;LOG4CPP_FIX_ERROR_COLLISION=1;NOMINMAX;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <WarningLevel>Level4</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <AdditionalIncludeDirectories>$(SolutionDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <GenerateXMLDocumentationFiles>false</GenerateXMLDocumentationFiles>
+      <Optimization>Disabled</Optimization>
+      <StringPooling>true</StringPooling>
+      <BasicRuntimeChecks>Default</BasicRuntimeChecks>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <PrecompiledHeaderFile />
+    </ClCompile>
+    <Lib>
+      <IgnoreSpecificDefaultLibraries>libcmt.lib</IgnoreSpecificDefaultLibraries>
+      <AdditionalDependencies>
+      </AdditionalDependencies>
+    </Lib>
+    <PreBuildEvent>
+      <Command>powershell.exe -ExecutionPolicy Bypass -NoProfile -NonInteractive -File version-stamp.ps1</Command>
+    </PreBuildEvent>
+    <PostBuildEvent>
+      <Message>Copy log config files to build directory</Message>
+      <Command>xcopy /Y $(SolutionDir)*.cfg $(TargetDir)..</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="common\RmVersion.cpp" />
+    <ClCompile Include="log\Logger.cpp" />
+    <ClCompile Include="log\Tracer.cpp" />
+    <ClCompile Include="scoreboard\BoundaryArray.cpp" />
+    <ClCompile Include="scoreboard\Dimension.cpp" />
+    <ClCompile Include="scoreboard\ScoreboardStratum.cpp" />
+    <ClCompile Include="scoreboard\ScoreboardUtility.cpp" />
+    <ClCompile Include="utility\RmSHA1.cpp" />
+    <ClCompile Include="utility\StringParserUtility.cpp" />
+    <ClCompile Include="utility\Utility.cpp" />
+    <ClCompile Include="common\ClassTemplate.cpp" />
+    <ClCompile Include="common\CropSimCommands.cpp" />
+    <ClCompile Include="common\DoubleCoordinates.cpp" />
+    <ClCompile Include="common\Exceptions.cpp" />
+    <ClCompile Include="common\RmAssert.cpp" />
+    <ClCompile Include="common\SimplestCrudestHash.cpp" />
+    <ClCompile Include="macos_compatibility\CCollaborator.cpp" />
+    <ClCompile Include="macos_compatibility\LongCoordinates.cpp" />
+    <ClCompile Include="macos_compatibility\MacResourceManager.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="common\RmVersion.h" />
+    <ClInclude Include="log\Logger.h" />
+    <ClInclude Include="log\Tracer.h" />
+    <ClInclude Include="utility\RmSHA1.h" />
+    <ClInclude Include="utility\Vec3d.h" />
+    <ClInclude Include="scoreboard\BoundaryArray.h" />
+    <ClInclude Include="scoreboard\BoundaryArrayExceptions.h" />
+    <ClInclude Include="scoreboard\Dimension.h" />
+    <ClInclude Include="scoreboard\ScoreboardBox.h" />
+    <ClInclude Include="scoreboard\ScoreboardStratum.h" />
+    <ClInclude Include="scoreboard\ScoreboardUtility.h" />
+    <ClInclude Include="utility\StringParserUtility.h" />
+    <ClInclude Include="utility\Utility.h" />
+    <ClInclude Include="common\ClassTemplate.h" />
+    <ClInclude Include="common\Constants.h" />
+    <ClInclude Include="common\CropSimCommands.h" />
+    <ClInclude Include="common\DoubleCoordinates.h" />
+    <ClInclude Include="common\Exceptions.h" />
+    <ClInclude Include="common\ExtraStuff.h" />
+    <ClInclude Include="common\RmAssert.h" />
+    <ClInclude Include="common\SimplestCrudestHash.h" />
+    <ClInclude Include="common\structures.h" />
+    <ClInclude Include="common\Types.h" />
+    <ClInclude Include="macos_compatibility\CCollaborator.h" />
+    <ClInclude Include="macos_compatibility\CropSimStringResources.h" />
+    <ClInclude Include="macos_compatibility\LongCoordinates.h" />
+    <ClInclude Include="macos_compatibility\macos_compatibility.h" />
+    <ClInclude Include="macos_compatibility\MacResourceManager.h" />
+    <ClInclude Include="macos_compatibility\MacTypes.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+    <None Include="version-stamp.ps1" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+    <Import Project="..\..\packages\boost.1.72.0.0\build\boost.targets" Condition="Exists('..\..\packages\boost.1.72.0.0\build\boost.targets')" />
+    <Import Project="..\..\packages\log4cpp.1.1.3\build\log4cpp.targets" Condition="Exists('..\..\packages\log4cpp.1.1.3\build\log4cpp.targets')" />
+  </ImportGroup>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\..\packages\boost.1.72.0.0\build\boost.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\..\packages\boost.1.72.0.0\build\boost.targets'))" />
+    <Error Condition="!Exists('..\..\packages\log4cpp.1.1.3\build\log4cpp.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\..\packages\log4cpp.1.1.3\build\log4cpp.targets'))" />
+  </Target>
+</Project>

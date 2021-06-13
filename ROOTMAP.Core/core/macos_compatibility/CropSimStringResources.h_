@@ -1,0 +1,30 @@
+// resource 'STR#' (32034, "Input & Log, File & Folder Names") {
+// resource 'STR#' (32035, "Collected Errors") {
+// resource 'STR#' (1, "Product") {
+// resource 'STR#' (128, "Common") {
+// resource 'STR#' (129, "Memory Warnings") {
+// resource 'STR#' (130, "Task Names") {
+// resource 'STR#' (131, "Exceptions", purgeable) {
+// resource 'STR#' (133, "Dlg validation", purgeable) {
+// resource 'STR#' (134, "Stream error messages", purgeable) {
+// resource 'STR#' (302, "Lib validation", purgeable) {
+// resource 'STR#' (405, "GVTs - Outgoing") {
+// resource 'STR#' (406, "GVTs- Incoming") {
+// resource 'STR#' (401, "Miscellaneous Errors", purgeable) {
+// resource 'STR#' (402, "View Directions") {
+// resource 'STR#' (400, "Window Titles", purgeable) {
+// resource 'STR#' (403, "Table Axis Labels") {
+// resource 'STR#' (1002, "Characteristic Units", preload) {
+// resource 'STR#' (1001, "Characteristic Names", preload) {
+// resource 'STR#' (1000, "Process Names", preload) {
+// resource 'STR#' (407, "Summary Routine Names") {
+// resource 'STR#' (408, "Buffer Error Descriptions") {
+// resource 'STR#' (450, "JInputAssociation Information Labels") {
+// resource 'STR#' (451, "JOutputAssociation Information Labels") {
+// resource 'STR#' (452, "JMetaAssociation Information Labels") {
+// resource 'STR#' (453, "JAssociationLabel Information Label") {
+// resource 'STR#' (404, "Miscellaneous") {
+// resource 'STR#' (409, "Plant Browser Button Names and Commands") {
+// resource 'STR#' (410, "Plant Type Browser Button Names and Commands") {
+// resource 'STR#' (411, "Plant Summary Browser Button Names and Commands") {
+// for the 'STR#' resource replacements

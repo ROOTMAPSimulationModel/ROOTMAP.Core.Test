@@ -1,0 +1,68 @@
+
+-----------------------
+SharedAttributeUser::SearchForIndex
+SharedAttributeOwner::SearchForIndex(const char * attribute_name, const char * variation_name, const char * variation_name2, bool inclusive);
+SharedAttributeIteratorAssistant::SearchForIndex(const char * attribute_name, const char * variation_name, const char * second_va_name, bool inclusive) const
+
+
+
+
+(FORM 1)
+SharedAttributeUser::SearchForAttribute(const char * a_name);
+  SharedAttributeOwner::FindAttribute(const RmString & attribute_name, const RmString & variation_name, const RmString & variation_string, const RmString & avoid_variation);
+    SharedAttributeManager::FindAttribute(const RmString & attribute_name, const RmString & variation_name, const RmString & variation_string, const RmString & avoid_variation, SharedAttributeOwner * owner);
+    * for each owner, starting with the given owner:
+      SharedAttributeOwner::DoFindAttribute(const RmString & attribute_name, const RmString & variation_name, const RmString & variation_string, const RmString & avoid_variation);
+      * for each family:
+        * checks for avoidable variations
+        * checks for desired variations
+        SharedAttributeOwner::FindAttribute(const RmString & full_attribute_name);
+        SharedAttributeManager::FindAttribute(const RmString & full_attribute_name, SharedAttributeOwner * owner);
+        SharedAttributeOwner::DoFindAttribute(const RmString & full_attribute_name);
+        * searches member list of SA for matching full attribute name
+  * if the above search fails, falls back to performing
+  SharedAttributeOwner::FindAttribute(const RmString & full_attribute_name);
+
+-----------------------
+
+What should create the SharedAttributeManager ?
+
+The choices would appear to be
+* The Engine
+* statically by the derived type (ie. and hence registering with the Registrar)
+* A leader of the group of classes that will be using the attributes.  In the initial
+  instance, to be the PlantLord.
+* The XML input handler
+
+-----------------------
+The SharedAttributeOwners (Plant PlantType PlantLord Scoreboard) are made independently of the SharedAttributes system, so they must Register().  Since their registration should come before SharedAttributes are made, SharedAttributes are made AFTER the owners.
+
+Since Plants and PlantTypes can be created dynamically after the simulation begins, the create mechanism is able to cope with new Plants and PlantTypes at any time.
+
+SharedAttributeOwners have knowledge of what constitutes a SharedAttributeVariation, so that when a new instance of something is created that would cause a new SharedAttribute or SharedAttributeFamily, creation should be initiated.
+
+For instance the PlantLord knows that when a new Plant is made, that if there are any SharedAttributes that vary by Plant, a new SharedAttribute or family of SharedAttributes should be created for that Plant.
+
+-----------------------
+
+Whichever creates a SharedAttribute must know of the SharedAttributeSupplier, as that is
+what is 
+
+The SharedAttributeSupplier should construct the SharedAttribute itself, so that it may
+
+
+-----------------------
+
+How do you ask the PlantType to tell you its defaults ?
+
+
+-----------------------
+
+
+Which class should "own" the CharacteristicDescriptor of each SharedAttribute ?  At this
+stage, only the SharedAttributeFamily and SharedAttributeSupplier know about all the
+permutations of SharedAttribute that are created.
+
+I suspect that the (surprise surprise) SharedAttributeOwner should own all the permutations.
+That means adding the owner to somewhere so that it can be told by either the Family or
+Supplier.

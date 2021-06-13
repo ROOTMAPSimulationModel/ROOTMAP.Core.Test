@@ -1,0 +1,66 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.168
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "core.test", "core.test\core.test.vcxproj", "{A007DEB4-43CC-4188-A90A-A41631B00995}"
+	ProjectSection(ProjectDependencies) = postProject
+		{C12E8AA3-F9AC-42B3-9B45-2D5E5F53EB61} = {C12E8AA3-F9AC-42B3-9B45-2D5E5F53EB61}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "simulation.test", "simulation.test\simulation.test.vcxproj", "{FBA8F819-BCFC-4620-B03A-68FB22B9B1F0}"
+	ProjectSection(ProjectDependencies) = postProject
+		{F5BB8BD4-789E-4E79-B203-EADADC10A936} = {F5BB8BD4-789E-4E79-B203-EADADC10A936}
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{5185E5A2-8156-40B0-BE90-3C207B1015FD}"
+	ProjectSection(SolutionItems) = preProject
+		catch.hpp = catch.hpp
+		CatchTests.runsettings = CatchTests.runsettings
+		nuget\ROOTMAP.Core.nuspec = nuget\ROOTMAP.Core.nuspec
+		nuget\build\ROOTMAP.Core.targets = nuget\build\ROOTMAP.Core.targets
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "sample-app", "sample-app\sample-app.vcxproj", "{17A56F84-62BC-49C7-AC06-BE9B22A6A375}"
+	ProjectSection(ProjectDependencies) = postProject
+		{C12E8AA3-F9AC-42B3-9B45-2D5E5F53EB61} = {C12E8AA3-F9AC-42B3-9B45-2D5E5F53EB61}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "core", "ROOTMAP.Core\core\core.vcxproj", "{C12E8AA3-F9AC-42B3-9B45-2D5E5F53EB61}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "simulation", "ROOTMAP.Core\simulation\simulation.vcxproj", "{F5BB8BD4-789E-4E79-B203-EADADC10A936}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x86 = Debug|x86
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A007DEB4-43CC-4188-A90A-A41631B00995}.Debug|x86.ActiveCfg = Debug|Win32
+		{A007DEB4-43CC-4188-A90A-A41631B00995}.Debug|x86.Build.0 = Debug|Win32
+		{A007DEB4-43CC-4188-A90A-A41631B00995}.Release|x86.ActiveCfg = Release|Win32
+		{A007DEB4-43CC-4188-A90A-A41631B00995}.Release|x86.Build.0 = Release|Win32
+		{FBA8F819-BCFC-4620-B03A-68FB22B9B1F0}.Debug|x86.ActiveCfg = Debug|Win32
+		{FBA8F819-BCFC-4620-B03A-68FB22B9B1F0}.Debug|x86.Build.0 = Debug|Win32
+		{FBA8F819-BCFC-4620-B03A-68FB22B9B1F0}.Release|x86.ActiveCfg = Release|Win32
+		{FBA8F819-BCFC-4620-B03A-68FB22B9B1F0}.Release|x86.Build.0 = Release|Win32
+		{17A56F84-62BC-49C7-AC06-BE9B22A6A375}.Debug|x86.ActiveCfg = Debug|Win32
+		{17A56F84-62BC-49C7-AC06-BE9B22A6A375}.Debug|x86.Build.0 = Debug|Win32
+		{17A56F84-62BC-49C7-AC06-BE9B22A6A375}.Release|x86.ActiveCfg = Release|Win32
+		{17A56F84-62BC-49C7-AC06-BE9B22A6A375}.Release|x86.Build.0 = Release|Win32
+		{C12E8AA3-F9AC-42B3-9B45-2D5E5F53EB61}.Debug|x86.ActiveCfg = Debug|Win32
+		{C12E8AA3-F9AC-42B3-9B45-2D5E5F53EB61}.Debug|x86.Build.0 = Debug|Win32
+		{C12E8AA3-F9AC-42B3-9B45-2D5E5F53EB61}.Release|x86.ActiveCfg = Release|Win32
+		{C12E8AA3-F9AC-42B3-9B45-2D5E5F53EB61}.Release|x86.Build.0 = Release|Win32
+		{F5BB8BD4-789E-4E79-B203-EADADC10A936}.Debug|x86.ActiveCfg = Debug|Win32
+		{F5BB8BD4-789E-4E79-B203-EADADC10A936}.Debug|x86.Build.0 = Debug|Win32
+		{F5BB8BD4-789E-4E79-B203-EADADC10A936}.Release|x86.ActiveCfg = Release|Win32
+		{F5BB8BD4-789E-4E79-B203-EADADC10A936}.Release|x86.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {84AB4AAD-DEE7-4AE3-8A2F-F9AE31685E62}
+	EndGlobalSection
+EndGlobal

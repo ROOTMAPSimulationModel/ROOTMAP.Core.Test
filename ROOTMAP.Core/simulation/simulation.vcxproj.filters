@@ -1,0 +1,961 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="common">
+      <UniqueIdentifier>{8bf657a7-2cff-4e0b-961b-d7a2d5957279}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;odl;idl;h;hpp;hxx</Extensions>
+    </Filter>
+    <Filter Include="data_access">
+      <UniqueIdentifier>{c51da5c6-f2ee-43f5-8ab7-73eb8115cf0f}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;odl;idl;h;hpp;hxx</Extensions>
+    </Filter>
+    <Filter Include="data_access\common">
+      <UniqueIdentifier>{62c6e33a-a225-4ec1-857b-e485d8056d04}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="data_access\interface">
+      <UniqueIdentifier>{76fb8c7a-5cfa-40fc-97b6-96889858cc55}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="data_access\tinyxmlconfig">
+      <UniqueIdentifier>{ddf2efe8-5819-4396-b97c-fc8bd62faa00}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="data_access\dummyconfig">
+      <UniqueIdentifier>{dc490880-f55b-4a4d-8094-6ef2886c07d0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="data_access\input_scheme_parser">
+      <UniqueIdentifier>{0d45c3ad-a5d1-4bff-9e79-35f6dc498225}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="file">
+      <UniqueIdentifier>{e1e10591-db07-4555-a45d-a54fdbd9c5d6}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;odl;idl;h;hpp;hxx</Extensions>
+    </Filter>
+    <Filter Include="file\common">
+      <UniqueIdentifier>{151b8a4e-a76c-4d09-a64b-be285032760d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="file\input">
+      <UniqueIdentifier>{b9bd8e04-6a2f-4ff1-9e45-c13e9cff15e2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="file\output">
+      <UniqueIdentifier>{ab14c770-9ae4-4be9-bf74-f69fd3221967}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="process">
+      <UniqueIdentifier>{9a6815cc-ab51-4e8d-abd7-4ab26cd0c4d7}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;odl;idl;h;hpp;hxx</Extensions>
+    </Filter>
+    <Filter Include="process\common">
+      <UniqueIdentifier>{ead8f9ba-0ec3-42bb-b9f3-188fb4a55751}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="process\interprocess_communication">
+      <UniqueIdentifier>{b1775b55-5644-4748-93c2-51d9f14cd609}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="process\modules">
+      <UniqueIdentifier>{bdf2d811-5215-49e6-a302-aa836b631c47}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="process\plant">
+      <UniqueIdentifier>{9caf2b46-ba18-43d2-943f-768cc927582e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="process\shared_attributes">
+      <UniqueIdentifier>{53c52732-db4f-4d98-9842-e954abe8d9e6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="process\raytrace">
+      <UniqueIdentifier>{64b21b00-c991-4de8-b1e2-2522f18449ce}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="scoreboard">
+      <UniqueIdentifier>{721799f5-e2e1-41b4-9581-4d054c4671de}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;odl;idl;h;hpp;hxx</Extensions>
+    </Filter>
+    <Filter Include="data_persistence">
+      <UniqueIdentifier>{a4b88a1c-b8a5-4cd3-962d-edd2479b65a9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="data_persistence\interface">
+      <UniqueIdentifier>{f0956f98-fea5-42d4-ae73-e377e24afc7c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="data_persistence\common">
+      <UniqueIdentifier>{9fe3caf3-0b19-441e-978e-67450d0343e8}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="common\IdentifierUtility.cpp">
+      <Filter>common</Filter>
+    </ClCompile>
+    <ClCompile Include="common\ScoreboardProcessInitialisers.cpp">
+      <Filter>common</Filter>
+    </ClCompile>
+    <ClCompile Include="common\SimulationEngine.cpp">
+      <Filter>common</Filter>
+    </ClCompile>
+    <ClCompile Include="common\SprintUtility.cpp">
+      <Filter>common</Filter>
+    </ClCompile>
+    <ClCompile Include="data_access\common\ConfigurationDataStore.cpp">
+      <Filter>data_access\common</Filter>
+    </ClCompile>
+    <ClCompile Include="data_access\common\DataAccessManager.cpp">
+      <Filter>data_access\common</Filter>
+    </ClCompile>
+    <ClCompile Include="data_access\common\NameLocationData.cpp">
+      <Filter>data_access\common</Filter>
+    </ClCompile>
+    <ClCompile Include="data_access\tinyxmlconfig\TXCharacteristicDA.cpp">
+      <Filter>data_access\tinyxmlconfig</Filter>
+    </ClCompile>
+    <ClCompile Include="data_access\tinyxmlconfig\TXConfigurationDataStore.cpp">
+      <Filter>data_access\tinyxmlconfig</Filter>
+    </ClCompile>
+    <ClCompile Include="data_access\tinyxmlconfig\TXDataAccessManager.cpp">
+      <Filter>data_access\tinyxmlconfig</Filter>
+    </ClCompile>
+    <ClCompile Include="data_access\tinyxmlconfig\TXOutputRuleDA.cpp">
+      <Filter>data_access\tinyxmlconfig</Filter>
+    </ClCompile>
+    <ClCompile Include="data_access\tinyxmlconfig\TXPlantDA.cpp">
+      <Filter>data_access\tinyxmlconfig</Filter>
+    </ClCompile>
+    <ClCompile Include="data_access\tinyxmlconfig\TXPostOfficeDA.cpp">
+      <Filter>data_access\tinyxmlconfig</Filter>
+    </ClCompile>
+    <ClCompile Include="data_access\tinyxmlconfig\TXProcessDA.cpp">
+      <Filter>data_access\tinyxmlconfig</Filter>
+    </ClCompile>
+    <ClCompile Include="data_access\tinyxmlconfig\TXProcessSpecialDA.cpp">
+      <Filter>data_access\tinyxmlconfig</Filter>
+    </ClCompile>
+    <ClCompile Include="data_access\tinyxmlconfig\TXScoreboardDA.cpp">
+      <Filter>data_access\tinyxmlconfig</Filter>
+    </ClCompile>
+    <ClCompile Include="data_access\tinyxmlconfig\TXScoreboardDataDA.cpp">
+      <Filter>data_access\tinyxmlconfig</Filter>
+    </ClCompile>
+    <ClCompile Include="data_access\tinyxmlconfig\TXTableDA.cpp">
+      <Filter>data_access\tinyxmlconfig</Filter>
+    </ClCompile>
+    <ClCompile Include="data_access\tinyxmlconfig\TXUtility.cpp">
+      <Filter>data_access\tinyxmlconfig</Filter>
+    </ClCompile>
+    <ClCompile Include="data_access\tinyxmlconfig\TXViewDA.cpp">
+      <Filter>data_access\tinyxmlconfig</Filter>
+    </ClCompile>
+    <ClCompile Include="data_access\dummyconfig\DummyCharacteristicDA.cpp">
+      <Filter>data_access\dummyconfig</Filter>
+    </ClCompile>
+    <ClCompile Include="data_access\dummyconfig\DummyConfigurationDataStore.cpp">
+      <Filter>data_access\dummyconfig</Filter>
+    </ClCompile>
+    <ClCompile Include="data_access\dummyconfig\DummyDataAccessManager.cpp">
+      <Filter>data_access\dummyconfig</Filter>
+    </ClCompile>
+    <ClCompile Include="data_access\dummyconfig\DummyOutputRuleDA.cpp">
+      <Filter>data_access\dummyconfig</Filter>
+    </ClCompile>
+    <ClCompile Include="data_access\dummyconfig\DummyPlantDA.cpp">
+      <Filter>data_access\dummyconfig</Filter>
+    </ClCompile>
+    <ClCompile Include="data_access\dummyconfig\DummyPlantSummaryDA.cpp">
+      <Filter>data_access\dummyconfig</Filter>
+    </ClCompile>
+    <ClCompile Include="data_access\dummyconfig\DummyPlantTypeDA.cpp">
+      <Filter>data_access\dummyconfig</Filter>
+    </ClCompile>
+    <ClCompile Include="data_access\dummyconfig\DummyPostOfficeDA.cpp">
+      <Filter>data_access\dummyconfig</Filter>
+    </ClCompile>
+    <ClCompile Include="data_access\dummyconfig\DummyProcessDA.cpp">
+      <Filter>data_access\dummyconfig</Filter>
+    </ClCompile>
+    <ClCompile Include="data_access\dummyconfig\DummyProcessInitialisationDA.cpp">
+      <Filter>data_access\dummyconfig</Filter>
+    </ClCompile>
+    <ClCompile Include="data_access\dummyconfig\DummyProcessNothing.cpp">
+      <Filter>data_access\dummyconfig</Filter>
+    </ClCompile>
+    <ClCompile Include="data_access\dummyconfig\DummyProcessSpecialDA.cpp">
+      <Filter>data_access\dummyconfig</Filter>
+    </ClCompile>
+    <ClCompile Include="data_access\dummyconfig\DummyProcessWith2Characteristics.cpp">
+      <Filter>data_access\dummyconfig</Filter>
+    </ClCompile>
+    <ClCompile Include="data_access\dummyconfig\DummyScoreboardDA.cpp">
+      <Filter>data_access\dummyconfig</Filter>
+    </ClCompile>
+    <ClCompile Include="data_access\dummyconfig\DummySimulationEngineDA.cpp">
+      <Filter>data_access\dummyconfig</Filter>
+    </ClCompile>
+    <ClCompile Include="data_access\dummyconfig\DummyTableDA.cpp">
+      <Filter>data_access\dummyconfig</Filter>
+    </ClCompile>
+    <ClCompile Include="data_access\dummyconfig\DummyViewDA.cpp">
+      <Filter>data_access\dummyconfig</Filter>
+    </ClCompile>
+    <ClCompile Include="data_access\input_scheme_parser\InputSchemeParser.cpp">
+      <Filter>data_access\input_scheme_parser</Filter>
+    </ClCompile>
+    <ClCompile Include="data_access\input_scheme_parser\InputSchemeParser.tab.c">
+      <Filter>data_access\input_scheme_parser</Filter>
+    </ClCompile>
+    <ClCompile Include="data_access\input_scheme_parser\lex.yy.c">
+      <Filter>data_access\input_scheme_parser</Filter>
+    </ClCompile>
+    <ClCompile Include="data_access\input_scheme_parser\RmBisonAdapter.cpp">
+      <Filter>data_access\input_scheme_parser</Filter>
+    </ClCompile>
+    <ClCompile Include="file\output\BinaryDataOutputFile.cpp">
+      <Filter>file\output</Filter>
+    </ClCompile>
+    <ClCompile Include="file\output\DataOutputCoordinator.cpp">
+      <Filter>file\output</Filter>
+    </ClCompile>
+    <ClCompile Include="file\output\DataOutputFile.cpp">
+      <Filter>file\output</Filter>
+    </ClCompile>
+    <ClCompile Include="file\output\NonSpatialDataOutputStrategy.cpp">
+      <Filter>file\output</Filter>
+    </ClCompile>
+    <ClCompile Include="file\output\OutputFileAlarm.cpp">
+      <Filter>file\output</Filter>
+    </ClCompile>
+    <ClCompile Include="file\output\OutputRule.cpp">
+      <Filter>file\output</Filter>
+    </ClCompile>
+    <ClCompile Include="file\output\OutputStrategy.cpp">
+      <Filter>file\output</Filter>
+    </ClCompile>
+    <ClCompile Include="file\output\OutputTimingStrategy.cpp">
+      <Filter>file\output</Filter>
+    </ClCompile>
+    <ClCompile Include="file\output\RaytracerDataOutputStrategy.cpp">
+      <Filter>file\output</Filter>
+    </ClCompile>
+    <ClCompile Include="file\output\ScoreboardDataOutputStrategy.cpp">
+      <Filter>file\output</Filter>
+    </ClCompile>
+    <ClCompile Include="process\common\CharacteristicDescriptor.cpp">
+      <Filter>process\common</Filter>
+    </ClCompile>
+    <ClCompile Include="process\common\IProcessIterationUser.cpp">
+      <Filter>process\common</Filter>
+    </ClCompile>
+    <ClCompile Include="process\common\Process.cpp">
+      <Filter>process\common</Filter>
+    </ClCompile>
+    <ClCompile Include="process\common\ProcessCoordinator.cpp">
+      <Filter>process\common</Filter>
+    </ClCompile>
+    <ClCompile Include="process\common\ProcessExceptions.cpp">
+      <Filter>process\common</Filter>
+    </ClCompile>
+    <ClCompile Include="process\common\ProcessGroupLeader.cpp">
+      <Filter>process\common</Filter>
+    </ClCompile>
+    <ClCompile Include="process\common\ProcessList.cpp">
+      <Filter>process\common</Filter>
+    </ClCompile>
+    <ClCompile Include="process\common\ProcessModuleBase.cpp">
+      <Filter>process\common</Filter>
+    </ClCompile>
+    <ClCompile Include="process\common\ProcessUtility.cpp">
+      <Filter>process\common</Filter>
+    </ClCompile>
+    <ClCompile Include="process\interprocess_communication\InterprocessDataDescriptor.cpp">
+      <Filter>process\interprocess_communication</Filter>
+    </ClCompile>
+    <ClCompile Include="process\interprocess_communication\InterprocessDescriptorList.cpp">
+      <Filter>process\interprocess_communication</Filter>
+    </ClCompile>
+    <ClCompile Include="process\interprocess_communication\Message.cpp">
+      <Filter>process\interprocess_communication</Filter>
+    </ClCompile>
+    <ClCompile Include="process\interprocess_communication\MessageList.cpp">
+      <Filter>process\interprocess_communication</Filter>
+    </ClCompile>
+    <ClCompile Include="process\interprocess_communication\PostOffice.cpp">
+      <Filter>process\interprocess_communication</Filter>
+    </ClCompile>
+    <ClCompile Include="process\interprocess_communication\ProcessActionDescriptor.cpp">
+      <Filter>process\interprocess_communication</Filter>
+    </ClCompile>
+    <ClCompile Include="process\modules\BoundingCylinder.cpp">
+      <Filter>process\modules</Filter>
+    </ClCompile>
+    <ClCompile Include="process\modules\BoundingRectangularPrism.cpp">
+      <Filter>process\modules</Filter>
+    </ClCompile>
+    <ClCompile Include="process\modules\DrawingDemonstration.cpp">
+      <Filter>process\modules</Filter>
+    </ClCompile>
+    <ClCompile Include="process\modules\Nitrate.cpp">
+      <Filter>process\modules</Filter>
+    </ClCompile>
+    <ClCompile Include="process\modules\OrganicMatter.cpp">
+      <Filter>process\modules</Filter>
+    </ClCompile>
+    <ClCompile Include="process\modules\OrganicMatterInput.cpp">
+      <Filter>process\modules</Filter>
+    </ClCompile>
+    <ClCompile Include="process\modules\Phosphorus.cpp">
+      <Filter>process\modules</Filter>
+    </ClCompile>
+    <ClCompile Include="process\modules\VolumeObjectCoordinator.cpp">
+      <Filter>process\modules</Filter>
+    </ClCompile>
+    <ClCompile Include="process\modules\Water.cpp">
+      <Filter>process\modules</Filter>
+    </ClCompile>
+    <ClCompile Include="process\plant\Axis.cpp">
+      <Filter>process\plant</Filter>
+    </ClCompile>
+    <ClCompile Include="process\plant\Branch.cpp">
+      <Filter>process\plant</Filter>
+    </ClCompile>
+    <ClCompile Include="process\plant\Plant.cpp">
+      <Filter>process\plant</Filter>
+    </ClCompile>
+    <ClCompile Include="process\plant\Plant_DynamicResAllocToRoots.cpp">
+      <Filter>process\plant</Filter>
+    </ClCompile>
+    <ClCompile Include="process\plant\PlantCalculations.cpp">
+      <Filter>process\plant</Filter>
+    </ClCompile>
+    <ClCompile Include="process\plant\PlantCoordinator.cpp">
+      <Filter>process\plant</Filter>
+    </ClCompile>
+    <ClCompile Include="process\plant\PlantSummary.cpp">
+      <Filter>process\plant</Filter>
+    </ClCompile>
+    <ClCompile Include="process\plant\PlantSummaryHelper.cpp">
+      <Filter>process\plant</Filter>
+    </ClCompile>
+    <ClCompile Include="process\plant\PlantSummaryRegistration.cpp">
+      <Filter>process\plant</Filter>
+    </ClCompile>
+    <ClCompile Include="process\plant\PlantSummarySupplier.cpp">
+      <Filter>process\plant</Filter>
+    </ClCompile>
+    <ClCompile Include="process\plant\PlantType.cpp">
+      <Filter>process\plant</Filter>
+    </ClCompile>
+    <ClCompile Include="process\plant\PossibleAxis.cpp">
+      <Filter>process\plant</Filter>
+    </ClCompile>
+    <ClCompile Include="process\plant\RootTip.cpp">
+      <Filter>process\plant</Filter>
+    </ClCompile>
+    <ClCompile Include="process\shared_attributes\PlantSharedAttributeSupport.cpp">
+      <Filter>process\shared_attributes</Filter>
+    </ClCompile>
+    <ClCompile Include="process\shared_attributes\ProcessAttributeSupplier.cpp">
+      <Filter>process\shared_attributes</Filter>
+    </ClCompile>
+    <ClCompile Include="process\shared_attributes\ProcessSharedAttributeOwner.cpp">
+      <Filter>process\shared_attributes</Filter>
+    </ClCompile>
+    <ClCompile Include="process\shared_attributes\ScoreboardAttributeSupplier.cpp">
+      <Filter>process\shared_attributes</Filter>
+    </ClCompile>
+    <ClCompile Include="process\shared_attributes\SharedAttribute.cpp">
+      <Filter>process\shared_attributes</Filter>
+    </ClCompile>
+    <ClCompile Include="process\shared_attributes\SharedAttributeFamily.cpp">
+      <Filter>process\shared_attributes</Filter>
+    </ClCompile>
+    <ClCompile Include="process\shared_attributes\SharedAttributeIteratorAssistant.cpp">
+      <Filter>process\shared_attributes</Filter>
+    </ClCompile>
+    <ClCompile Include="process\shared_attributes\SharedAttributeManager.cpp">
+      <Filter>process\shared_attributes</Filter>
+    </ClCompile>
+    <ClCompile Include="process\shared_attributes\SharedAttributeOwner.cpp">
+      <Filter>process\shared_attributes</Filter>
+    </ClCompile>
+    <ClCompile Include="process\shared_attributes\SharedAttributeRegistrar.cpp">
+      <Filter>process\shared_attributes</Filter>
+    </ClCompile>
+    <ClCompile Include="process\shared_attributes\SharedAttributeSearchHelper.cpp">
+      <Filter>process\shared_attributes</Filter>
+    </ClCompile>
+    <ClCompile Include="process\shared_attributes\SharedAttributeSupplier.cpp">
+      <Filter>process\shared_attributes</Filter>
+    </ClCompile>
+    <ClCompile Include="process\shared_attributes\SharedAttributeVariation.cpp">
+      <Filter>process\shared_attributes</Filter>
+    </ClCompile>
+    <ClCompile Include="process\raytrace\RaytracerData.cpp">
+      <Filter>process\raytrace</Filter>
+    </ClCompile>
+    <ClCompile Include="process\raytrace\RaytracerDataAccessor.cpp">
+      <Filter>process\raytrace</Filter>
+    </ClCompile>
+    <ClCompile Include="process\raytrace\RenderCoordinator.cpp">
+      <Filter>process\raytrace</Filter>
+    </ClCompile>
+    <ClCompile Include="process\raytrace\ScoreboardColourInfo.cpp">
+      <Filter>process\raytrace</Filter>
+    </ClCompile>
+    <ClCompile Include="process\raytrace\ScoreboardRenderer.cpp">
+      <Filter>process\raytrace</Filter>
+    </ClCompile>
+    <ClCompile Include="scoreboard\DimensionIterator.cpp">
+      <Filter>scoreboard</Filter>
+    </ClCompile>
+    <ClCompile Include="scoreboard\DimensionOrder.cpp">
+      <Filter>scoreboard</Filter>
+    </ClCompile>
+    <ClCompile Include="scoreboard\IScoreboardIterationUser.cpp">
+      <Filter>scoreboard</Filter>
+    </ClCompile>
+    <ClCompile Include="scoreboard\Scoreboard.cpp">
+      <Filter>scoreboard</Filter>
+    </ClCompile>
+    <ClCompile Include="scoreboard\ScoreboardCoordinator.cpp">
+      <Filter>scoreboard</Filter>
+    </ClCompile>
+    <ClCompile Include="data_persistence\common\DataPersistenceManager.cpp">
+      <Filter>data_persistence\common</Filter>
+    </ClCompile>
+    <ClCompile Include="data_persistence\common\DirectoryData.cpp">
+      <Filter>data_persistence\common</Filter>
+    </ClCompile>
+    <ClCompile Include="data_persistence\common\PersistedDataDirectory.cpp">
+      <Filter>data_persistence\common</Filter>
+    </ClCompile>
+    <ClCompile Include="data_access\common\DataPreviewer.cpp">
+      <Filter>data_access\common</Filter>
+    </ClCompile>
+    <ClCompile Include="data_access\common\OutputDataPreviewer.cpp">
+      <Filter>data_access\common</Filter>
+    </ClCompile>
+    <ClCompile Include="data_access\common\PlantDataPreviewer.cpp">
+      <Filter>data_access\common</Filter>
+    </ClCompile>
+    <ClCompile Include="data_access\common\PostOfficeDataPreviewer.cpp">
+      <Filter>data_access\common</Filter>
+    </ClCompile>
+    <ClCompile Include="data_access\common\ProcessDataPreviewer.cpp">
+      <Filter>data_access\common</Filter>
+    </ClCompile>
+    <ClCompile Include="data_access\common\ScoreboardDataPreviewer.cpp">
+      <Filter>data_access\common</Filter>
+    </ClCompile>
+    <ClCompile Include="data_access\common\SharedAttributeDataPreviewer.cpp">
+      <Filter>data_access\common</Filter>
+    </ClCompile>
+    <ClCompile Include="data_access\common\VolumeObjectDataPreviewer.cpp">
+      <Filter>data_access\common</Filter>
+    </ClCompile>
+    <ClCompile Include="data_access\common\WindowDataPreviewer.cpp">
+      <Filter>data_access\common</Filter>
+    </ClCompile>
+    <ClCompile Include="data_access\tinyxmlconfig\TXDataWriter.cpp">
+      <Filter>data_access\tinyxmlconfig</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="common\IdentifierUtility.h">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="common\ISimulationActivityObserver.h">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="common\ScoreboardProcessInitialisers.h">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="common\SimulationEngine.h">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="common\SprintUtility.h">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="common\Types.h">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="data_access\common\ConfigurationDataStore.h">
+      <Filter>data_access\common</Filter>
+    </ClInclude>
+    <ClInclude Include="data_access\common\DataAccessManager.h">
+      <Filter>data_access\common</Filter>
+    </ClInclude>
+    <ClInclude Include="data_access\common\IDataAccessUser.h">
+      <Filter>data_access\common</Filter>
+    </ClInclude>
+    <ClInclude Include="data_access\common\ITableDataUser.h">
+      <Filter>data_access\common</Filter>
+    </ClInclude>
+    <ClInclude Include="data_access\common\IViewDataUser.h">
+      <Filter>data_access\common</Filter>
+    </ClInclude>
+    <ClInclude Include="data_access\common\NameLocationData.h">
+      <Filter>data_access\common</Filter>
+    </ClInclude>
+    <ClInclude Include="data_access\interface\CharacteristicDAI.h">
+      <Filter>data_access\interface</Filter>
+    </ClInclude>
+    <ClInclude Include="data_access\interface\OutputRuleDAI.h">
+      <Filter>data_access\interface</Filter>
+    </ClInclude>
+    <ClInclude Include="data_access\interface\PlantDAI.h">
+      <Filter>data_access\interface</Filter>
+    </ClInclude>
+    <ClInclude Include="data_access\interface\PlantSummaryDAI.h">
+      <Filter>data_access\interface</Filter>
+    </ClInclude>
+    <ClInclude Include="data_access\interface\PlantTypeDAI.h">
+      <Filter>data_access\interface</Filter>
+    </ClInclude>
+    <ClInclude Include="data_access\interface\PostOfficeDAI.h">
+      <Filter>data_access\interface</Filter>
+    </ClInclude>
+    <ClInclude Include="data_access\interface\ProcessDAI.h">
+      <Filter>data_access\interface</Filter>
+    </ClInclude>
+    <ClInclude Include="data_access\interface\ProcessInitialisationDAI.h">
+      <Filter>data_access\interface</Filter>
+    </ClInclude>
+    <ClInclude Include="data_access\interface\ProcessSpecialDAI.h">
+      <Filter>data_access\interface</Filter>
+    </ClInclude>
+    <ClInclude Include="data_access\interface\ScoreboardDAI.h">
+      <Filter>data_access\interface</Filter>
+    </ClInclude>
+    <ClInclude Include="data_access\interface\ScoreboardDataDAI.h">
+      <Filter>data_access\interface</Filter>
+    </ClInclude>
+    <ClInclude Include="data_access\interface\SharedAttributeDAI.h">
+      <Filter>data_access\interface</Filter>
+    </ClInclude>
+    <ClInclude Include="data_access\interface\SimulationEngineDAI.h">
+      <Filter>data_access\interface</Filter>
+    </ClInclude>
+    <ClInclude Include="data_access\interface\TableDAI.h">
+      <Filter>data_access\interface</Filter>
+    </ClInclude>
+    <ClInclude Include="data_access\interface\ViewDAI.h">
+      <Filter>data_access\interface</Filter>
+    </ClInclude>
+    <ClInclude Include="data_access\tinyxmlconfig\TXCharacteristicDA.h">
+      <Filter>data_access\tinyxmlconfig</Filter>
+    </ClInclude>
+    <ClInclude Include="data_access\tinyxmlconfig\TXConfigurationDataStore.h">
+      <Filter>data_access\tinyxmlconfig</Filter>
+    </ClInclude>
+    <ClInclude Include="data_access\tinyxmlconfig\TXDataAccessManager.h">
+      <Filter>data_access\tinyxmlconfig</Filter>
+    </ClInclude>
+    <ClInclude Include="data_access\tinyxmlconfig\TXOutputRuleDA.h">
+      <Filter>data_access\tinyxmlconfig</Filter>
+    </ClInclude>
+    <ClInclude Include="data_access\tinyxmlconfig\TXPlantDA.h">
+      <Filter>data_access\tinyxmlconfig</Filter>
+    </ClInclude>
+    <ClInclude Include="data_access\tinyxmlconfig\TXPostOfficeDA.h">
+      <Filter>data_access\tinyxmlconfig</Filter>
+    </ClInclude>
+    <ClInclude Include="data_access\tinyxmlconfig\TXProcessDA.h">
+      <Filter>data_access\tinyxmlconfig</Filter>
+    </ClInclude>
+    <ClInclude Include="data_access\tinyxmlconfig\TXProcessSpecialDA.h">
+      <Filter>data_access\tinyxmlconfig</Filter>
+    </ClInclude>
+    <ClInclude Include="data_access\tinyxmlconfig\TXScoreboardDA.h">
+      <Filter>data_access\tinyxmlconfig</Filter>
+    </ClInclude>
+    <ClInclude Include="data_access\tinyxmlconfig\TXScoreboardDataDA.h">
+      <Filter>data_access\tinyxmlconfig</Filter>
+    </ClInclude>
+    <ClInclude Include="data_access\tinyxmlconfig\TXTableDA.h">
+      <Filter>data_access\tinyxmlconfig</Filter>
+    </ClInclude>
+    <ClInclude Include="data_access\tinyxmlconfig\TXUtility.h">
+      <Filter>data_access\tinyxmlconfig</Filter>
+    </ClInclude>
+    <ClInclude Include="data_access\tinyxmlconfig\TXViewDA.h">
+      <Filter>data_access\tinyxmlconfig</Filter>
+    </ClInclude>
+    <ClInclude Include="data_access\dummyconfig\DummyCharacteristicDA.h">
+      <Filter>data_access\dummyconfig</Filter>
+    </ClInclude>
+    <ClInclude Include="data_access\dummyconfig\DummyConfigurationDataStore.h">
+      <Filter>data_access\dummyconfig</Filter>
+    </ClInclude>
+    <ClInclude Include="data_access\dummyconfig\DummyDataAccessManager.h">
+      <Filter>data_access\dummyconfig</Filter>
+    </ClInclude>
+    <ClInclude Include="data_access\dummyconfig\DummyOutputRuleDA.h">
+      <Filter>data_access\dummyconfig</Filter>
+    </ClInclude>
+    <ClInclude Include="data_access\dummyconfig\DummyPlantDA.h">
+      <Filter>data_access\dummyconfig</Filter>
+    </ClInclude>
+    <ClInclude Include="data_access\dummyconfig\DummyPlantSummaryDA.h">
+      <Filter>data_access\dummyconfig</Filter>
+    </ClInclude>
+    <ClInclude Include="data_access\dummyconfig\DummyPlantTypeDA.h">
+      <Filter>data_access\dummyconfig</Filter>
+    </ClInclude>
+    <ClInclude Include="data_access\dummyconfig\DummyPostOfficeDA.h">
+      <Filter>data_access\dummyconfig</Filter>
+    </ClInclude>
+    <ClInclude Include="data_access\dummyconfig\DummyProcessDA.h">
+      <Filter>data_access\dummyconfig</Filter>
+    </ClInclude>
+    <ClInclude Include="data_access\dummyconfig\DummyProcessInitialisationDA.h">
+      <Filter>data_access\dummyconfig</Filter>
+    </ClInclude>
+    <ClInclude Include="data_access\dummyconfig\DummyProcessNothing.h">
+      <Filter>data_access\dummyconfig</Filter>
+    </ClInclude>
+    <ClInclude Include="data_access\dummyconfig\DummyProcessSpecialDA.h">
+      <Filter>data_access\dummyconfig</Filter>
+    </ClInclude>
+    <ClInclude Include="data_access\dummyconfig\DummyProcessWith2Characteristics.h">
+      <Filter>data_access\dummyconfig</Filter>
+    </ClInclude>
+    <ClInclude Include="data_access\dummyconfig\DummyScoreboardDA.h">
+      <Filter>data_access\dummyconfig</Filter>
+    </ClInclude>
+    <ClInclude Include="data_access\dummyconfig\DummySimulationEngineDA.h">
+      <Filter>data_access\dummyconfig</Filter>
+    </ClInclude>
+    <ClInclude Include="data_access\dummyconfig\DummyTableDA.h">
+      <Filter>data_access\dummyconfig</Filter>
+    </ClInclude>
+    <ClInclude Include="data_access\dummyconfig\DummyViewDA.h">
+      <Filter>data_access\dummyconfig</Filter>
+    </ClInclude>
+    <ClInclude Include="data_access\input_scheme_parser\InputSchemeParser.h">
+      <Filter>data_access\input_scheme_parser</Filter>
+    </ClInclude>
+    <ClInclude Include="data_access\input_scheme_parser\InputSchemeParser.tab.h">
+      <Filter>data_access\input_scheme_parser</Filter>
+    </ClInclude>
+    <ClInclude Include="data_access\input_scheme_parser\RmBisonAdapter.h">
+      <Filter>data_access\input_scheme_parser</Filter>
+    </ClInclude>
+    <ClInclude Include="file\output\BinaryDataOutputFile.h">
+      <Filter>file\output</Filter>
+    </ClInclude>
+    <ClInclude Include="file\output\DataOutputCoordinator.h">
+      <Filter>file\output</Filter>
+    </ClInclude>
+    <ClInclude Include="file\output\DataOutputFile.h">
+      <Filter>file\output</Filter>
+    </ClInclude>
+    <ClInclude Include="file\output\NonSpatialDataOutputStrategy.h">
+      <Filter>file\output</Filter>
+    </ClInclude>
+    <ClInclude Include="file\output\OutputFileAlarm.h">
+      <Filter>file\output</Filter>
+    </ClInclude>
+    <ClInclude Include="file\output\OutputRule.h">
+      <Filter>file\output</Filter>
+    </ClInclude>
+    <ClInclude Include="file\output\OutputStrategy.h">
+      <Filter>file\output</Filter>
+    </ClInclude>
+    <ClInclude Include="file\output\OutputTimingStrategy.h">
+      <Filter>file\output</Filter>
+    </ClInclude>
+    <ClInclude Include="file\output\RaytracerDataOutputStrategy.h">
+      <Filter>file\output</Filter>
+    </ClInclude>
+    <ClInclude Include="file\output\ScoreboardDataOutputStrategy.h">
+      <Filter>file\output</Filter>
+    </ClInclude>
+    <ClInclude Include="file\output\ViewCaptureOutputStrategy.h">
+      <Filter>file\output</Filter>
+    </ClInclude>
+    <ClInclude Include="process\common\CharacteristicDescriptor.h">
+      <Filter>process\common</Filter>
+    </ClInclude>
+    <ClInclude Include="process\common\IProcessIterationUser.h">
+      <Filter>process\common</Filter>
+    </ClInclude>
+    <ClInclude Include="process\common\Process.h">
+      <Filter>process\common</Filter>
+    </ClInclude>
+    <ClInclude Include="process\common\Process_Dictionary.h">
+      <Filter>process\common</Filter>
+    </ClInclude>
+    <ClInclude Include="process\common\ProcessCoordinator.h">
+      <Filter>process\common</Filter>
+    </ClInclude>
+    <ClInclude Include="process\common\ProcessDrawing.h">
+      <Filter>process\common</Filter>
+    </ClInclude>
+    <ClInclude Include="process\common\ProcessExceptions.h">
+      <Filter>process\common</Filter>
+    </ClInclude>
+    <ClInclude Include="process\common\ProcessGroupLeader.h">
+      <Filter>process\common</Filter>
+    </ClInclude>
+    <ClInclude Include="process\common\ProcessList.h">
+      <Filter>process\common</Filter>
+    </ClInclude>
+    <ClInclude Include="process\common\ProcessModuleBase.h">
+      <Filter>process\common</Filter>
+    </ClInclude>
+    <ClInclude Include="process\common\ProcessUtility.h">
+      <Filter>process\common</Filter>
+    </ClInclude>
+    <ClInclude Include="process\interprocess_communication\InterprocessDataDescriptor.h">
+      <Filter>process\interprocess_communication</Filter>
+    </ClInclude>
+    <ClInclude Include="process\interprocess_communication\InterprocessDescriptorList.h">
+      <Filter>process\interprocess_communication</Filter>
+    </ClInclude>
+    <ClInclude Include="process\interprocess_communication\Message.h">
+      <Filter>process\interprocess_communication</Filter>
+    </ClInclude>
+    <ClInclude Include="process\interprocess_communication\MessageList.h">
+      <Filter>process\interprocess_communication</Filter>
+    </ClInclude>
+    <ClInclude Include="process\interprocess_communication\PostOffice.h">
+      <Filter>process\interprocess_communication</Filter>
+    </ClInclude>
+    <ClInclude Include="process\interprocess_communication\ProcessActionDescriptor.h">
+      <Filter>process\interprocess_communication</Filter>
+    </ClInclude>
+    <ClInclude Include="process\modules\BoundingCylinder.h">
+      <Filter>process\modules</Filter>
+    </ClInclude>
+    <ClInclude Include="process\modules\BoundingRectangularPrism.h">
+      <Filter>process\modules</Filter>
+    </ClInclude>
+    <ClInclude Include="process\modules\DrawingDemonstration.h">
+      <Filter>process\modules</Filter>
+    </ClInclude>
+    <ClInclude Include="process\modules\Nitrate.h">
+      <Filter>process\modules</Filter>
+    </ClInclude>
+    <ClInclude Include="process\modules\OrganicMatter.h">
+      <Filter>process\modules</Filter>
+    </ClInclude>
+    <ClInclude Include="process\modules\OrganicMatterInput.h">
+      <Filter>process\modules</Filter>
+    </ClInclude>
+    <ClInclude Include="process\modules\Phosphorus.h">
+      <Filter>process\modules</Filter>
+    </ClInclude>
+    <ClInclude Include="process\modules\VolumeObject.h">
+      <Filter>process\modules</Filter>
+    </ClInclude>
+    <ClInclude Include="process\modules\VolumeObjectCoordinator.h">
+      <Filter>process\modules</Filter>
+    </ClInclude>
+    <ClInclude Include="process\modules\Water.h">
+      <Filter>process\modules</Filter>
+    </ClInclude>
+    <ClInclude Include="process\plant\Axis.h">
+      <Filter>process\plant</Filter>
+    </ClInclude>
+    <ClInclude Include="process\plant\Branch.h">
+      <Filter>process\plant</Filter>
+    </ClInclude>
+    <ClInclude Include="process\plant\Plant.h">
+      <Filter>process\plant</Filter>
+    </ClInclude>
+    <ClInclude Include="process\plant\PlantCalculations.h">
+      <Filter>process\plant</Filter>
+    </ClInclude>
+    <ClInclude Include="process\plant\PlantCoordinator.h">
+      <Filter>process\plant</Filter>
+    </ClInclude>
+    <ClInclude Include="process\plant\PlantSummary.h">
+      <Filter>process\plant</Filter>
+    </ClInclude>
+    <ClInclude Include="process\plant\PlantSummaryHelper.h">
+      <Filter>process\plant</Filter>
+    </ClInclude>
+    <ClInclude Include="process\plant\PlantSummaryRegistration.h">
+      <Filter>process\plant</Filter>
+    </ClInclude>
+    <ClInclude Include="process\plant\PlantSummarySupplier.h">
+      <Filter>process\plant</Filter>
+    </ClInclude>
+    <ClInclude Include="process\plant\PlantType.h">
+      <Filter>process\plant</Filter>
+    </ClInclude>
+    <ClInclude Include="process\plant\PossibleAxis.h">
+      <Filter>process\plant</Filter>
+    </ClInclude>
+    <ClInclude Include="process\plant\RootTip.h">
+      <Filter>process\plant</Filter>
+    </ClInclude>
+    <ClInclude Include="process\shared_attributes\PlantSharedAttributeSupport.h">
+      <Filter>process\shared_attributes</Filter>
+    </ClInclude>
+    <ClInclude Include="process\shared_attributes\ProcessAttributeSupplier.h">
+      <Filter>process\shared_attributes</Filter>
+    </ClInclude>
+    <ClInclude Include="process\shared_attributes\ProcessSharedAttribute.h">
+      <Filter>process\shared_attributes</Filter>
+    </ClInclude>
+    <ClInclude Include="process\shared_attributes\ProcessSharedAttributeOwner.h">
+      <Filter>process\shared_attributes</Filter>
+    </ClInclude>
+    <ClInclude Include="process\shared_attributes\ScoreboardAttributeSupplier.h">
+      <Filter>process\shared_attributes</Filter>
+    </ClInclude>
+    <ClInclude Include="process\shared_attributes\ScoreboardSharedAttribute.h">
+      <Filter>process\shared_attributes</Filter>
+    </ClInclude>
+    <ClInclude Include="process\shared_attributes\SharedAttribute.h">
+      <Filter>process\shared_attributes</Filter>
+    </ClInclude>
+    <ClInclude Include="process\shared_attributes\SharedAttributeCommon.h">
+      <Filter>process\shared_attributes</Filter>
+    </ClInclude>
+    <ClInclude Include="process\shared_attributes\SharedAttributeFamily.h">
+      <Filter>process\shared_attributes</Filter>
+    </ClInclude>
+    <ClInclude Include="process\shared_attributes\SharedAttributeIteratorAssistant.h">
+      <Filter>process\shared_attributes</Filter>
+    </ClInclude>
+    <ClInclude Include="process\shared_attributes\SharedAttributeManager.h">
+      <Filter>process\shared_attributes</Filter>
+    </ClInclude>
+    <ClInclude Include="process\shared_attributes\SharedAttributeOwner.h">
+      <Filter>process\shared_attributes</Filter>
+    </ClInclude>
+    <ClInclude Include="process\shared_attributes\SharedAttributeRegistrar.h">
+      <Filter>process\shared_attributes</Filter>
+    </ClInclude>
+    <ClInclude Include="process\shared_attributes\SharedAttributeSearchHelper.h">
+      <Filter>process\shared_attributes</Filter>
+    </ClInclude>
+    <ClInclude Include="process\shared_attributes\SharedAttributeSupplier.h">
+      <Filter>process\shared_attributes</Filter>
+    </ClInclude>
+    <ClInclude Include="process\shared_attributes\SharedAttributeVariation.h">
+      <Filter>process\shared_attributes</Filter>
+    </ClInclude>
+    <ClInclude Include="process\raytrace\RaytracerData.h">
+      <Filter>process\raytrace</Filter>
+    </ClInclude>
+    <ClInclude Include="process\raytrace\RaytracerDataAccessor.h">
+      <Filter>process\raytrace</Filter>
+    </ClInclude>
+    <ClInclude Include="process\raytrace\RenderCoordinator.h">
+      <Filter>process\raytrace</Filter>
+    </ClInclude>
+    <ClInclude Include="process\raytrace\ScoreboardColourInfo.h">
+      <Filter>process\raytrace</Filter>
+    </ClInclude>
+    <ClInclude Include="process\raytrace\ScoreboardRenderer.h">
+      <Filter>process\raytrace</Filter>
+    </ClInclude>
+    <ClInclude Include="scoreboard\DimensionIterator.h">
+      <Filter>scoreboard</Filter>
+    </ClInclude>
+    <ClInclude Include="scoreboard\DimensionOrder.h">
+      <Filter>scoreboard</Filter>
+    </ClInclude>
+    <ClInclude Include="scoreboard\IScoreboardIterationUser.h">
+      <Filter>scoreboard</Filter>
+    </ClInclude>
+    <ClInclude Include="scoreboard\Scoreboard.h">
+      <Filter>scoreboard</Filter>
+    </ClInclude>
+    <ClInclude Include="scoreboard\ScoreboardCollaboration.h">
+      <Filter>scoreboard</Filter>
+    </ClInclude>
+    <ClInclude Include="scoreboard\ScoreboardCoordinator.h">
+      <Filter>scoreboard</Filter>
+    </ClInclude>
+    <ClInclude Include="scoreboard\ScoreboardDependencyIterator.h">
+      <Filter>scoreboard</Filter>
+    </ClInclude>
+    <ClInclude Include="scoreboard\ScoreboardFlags.h">
+      <Filter>scoreboard</Filter>
+    </ClInclude>
+    <ClInclude Include="data_persistence\interface\CharacteristicDPI.h">
+      <Filter>data_persistence\interface</Filter>
+    </ClInclude>
+    <ClInclude Include="data_persistence\interface\OutputRuleDPI.h">
+      <Filter>data_persistence\interface</Filter>
+    </ClInclude>
+    <ClInclude Include="data_persistence\interface\PlantDPI.h">
+      <Filter>data_persistence\interface</Filter>
+    </ClInclude>
+    <ClInclude Include="data_persistence\interface\PlantSummaryDPI.h">
+      <Filter>data_persistence\interface</Filter>
+    </ClInclude>
+    <ClInclude Include="data_persistence\interface\PlantTypeDPI.h">
+      <Filter>data_persistence\interface</Filter>
+    </ClInclude>
+    <ClInclude Include="data_persistence\interface\PostOfficeDPI.h">
+      <Filter>data_persistence\interface</Filter>
+    </ClInclude>
+    <ClInclude Include="data_persistence\interface\ProcessDPI.h">
+      <Filter>data_persistence\interface</Filter>
+    </ClInclude>
+    <ClInclude Include="data_persistence\interface\ProcessSpecialDPI.h">
+      <Filter>data_persistence\interface</Filter>
+    </ClInclude>
+    <ClInclude Include="data_persistence\interface\ScoreboardDataDPI.h">
+      <Filter>data_persistence\interface</Filter>
+    </ClInclude>
+    <ClInclude Include="data_persistence\interface\ScoreboardDPI.h">
+      <Filter>data_persistence\interface</Filter>
+    </ClInclude>
+    <ClInclude Include="data_persistence\interface\SharedAttributeDPI.h">
+      <Filter>data_persistence\interface</Filter>
+    </ClInclude>
+    <ClInclude Include="data_persistence\interface\TableDPI.h">
+      <Filter>data_persistence\interface</Filter>
+    </ClInclude>
+    <ClInclude Include="data_persistence\interface\ViewDPI.h">
+      <Filter>data_persistence\interface</Filter>
+    </ClInclude>
+    <ClInclude Include="data_persistence\common\DataPersistenceManager.h">
+      <Filter>data_persistence\common</Filter>
+    </ClInclude>
+    <ClInclude Include="data_persistence\common\DirectoryData.h">
+      <Filter>data_persistence\common</Filter>
+    </ClInclude>
+    <ClInclude Include="data_persistence\common\ITableDataMaintainer.h">
+      <Filter>data_persistence\common</Filter>
+    </ClInclude>
+    <ClInclude Include="data_persistence\common\IViewDataMaintainer.h">
+      <Filter>data_persistence\common</Filter>
+    </ClInclude>
+    <ClInclude Include="data_persistence\common\PersistedDataDirectory.h">
+      <Filter>data_persistence\common</Filter>
+    </ClInclude>
+    <ClInclude Include="data_access\common\DataPreviewer.h">
+      <Filter>data_access\common</Filter>
+    </ClInclude>
+    <ClInclude Include="data_access\common\OutputDataPreviewer.h">
+      <Filter>data_access\common</Filter>
+    </ClInclude>
+    <ClInclude Include="data_access\common\PlantDataPreviewer.h">
+      <Filter>data_access\common</Filter>
+    </ClInclude>
+    <ClInclude Include="data_access\common\PostOfficeDataPreviewer.h">
+      <Filter>data_access\common</Filter>
+    </ClInclude>
+    <ClInclude Include="data_access\common\ProcessDataPreviewer.h">
+      <Filter>data_access\common</Filter>
+    </ClInclude>
+    <ClInclude Include="data_access\common\ScoreboardDataPreviewer.h">
+      <Filter>data_access\common</Filter>
+    </ClInclude>
+    <ClInclude Include="data_access\common\SharedAttributeDataPreviewer.h">
+      <Filter>data_access\common</Filter>
+    </ClInclude>
+    <ClInclude Include="data_access\common\VolumeObjectDataPreviewer.h">
+      <Filter>data_access\common</Filter>
+    </ClInclude>
+    <ClInclude Include="data_access\common\WindowDataPreviewer.h">
+      <Filter>data_access\common</Filter>
+    </ClInclude>
+    <ClInclude Include="data_access\tinyxmlconfig\TXDataWriter.h">
+      <Filter>data_access\tinyxmlconfig</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="data_access\input_scheme_parser\InputSchemeParser.y">
+      <Filter>data_access\input_scheme_parser</Filter>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+</Project>

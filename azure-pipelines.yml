@@ -1,0 +1,59 @@
+# .NET Desktop
+# Build and run tests for .NET Desktop or Windows classic desktop solutions.
+# Add steps that publish symbols, save build artifacts, and more:
+# https://docs.microsoft.com/azure/devops/pipelines/apps/windows/dot-net
+
+trigger:
+- master
+
+pool:
+  vmImage: 'vs2017-win2016'
+
+variables:
+  solution: '**/*.sln'
+  buildPlatform: 'x86'
+  buildConfiguration: 'Release'
+
+steps:
+
+- checkout: self
+  submodules: true
+
+- task: GitVersion@5
+  inputs:
+    runtime: 'full'
+
+- task: NuGetToolInstaller@1
+
+- task: PowerShell@2
+  inputs:
+    filePath: 'ROOTMAP.Core\Prepare-ROOTMAP-Dependencies.ps1'
+    arguments: '-forceCleanInstall'
+
+- task: NuGetCommand@2
+  inputs:
+    restoreSolution: '$(solution)'
+
+- task: MSBuild@1
+  inputs:
+    solution: '$(solution)'
+    platform: '$(buildPlatform)'
+    configuration: '$(buildConfiguration)'
+
+- task: PowerShell@2
+  inputs:
+    targetType: 'inline'
+    script: |
+      dir
+      
+      .\$(buildConfiguration)\core.test\core.test.exe
+      
+      If ($LASTEXITCODE -ne 0) {
+          throw "Core test(s) failed"
+      }
+      
+      .\$(buildConfiguration)\simulation.test\simulation.test.exe
+      
+      If ($LASTEXITCODE -ne 0) {
+          throw "Simulation test(s) failed"
+      }

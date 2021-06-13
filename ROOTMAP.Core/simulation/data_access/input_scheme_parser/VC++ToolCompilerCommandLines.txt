@@ -1,0 +1,28 @@
+Flex
+----
+
+YES
+c:\cygwin\bin\bash.exe -c '/usr/bin/flex `/usr/bin/realpath "$(InputPath)" ` '
+
+
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="c:\cygwin\bin\bash.exe -c &apos;/usr/bin/flex `/usr/bin/realpath &quot;$(InputPath)&quot; ` &apos;"
+						CommandLine="c:\cygwin\bin\bash.exe -c &apos;/usr/bin/flex `/usr/bin/realpath &quot;$(InputPath)&quot; ` &apos;&#x0D;&#x0A;"
+						Outputs="$(ProjectDir)lex.yy.c"
+					/>
+
+
+
+Bison
+-----
+
+YES
+c:\cygwin\bin\bash.exe -c '/usr/bin/bison --verbose --debug -d `/usr/bin/realpath "$(InputPath)" ` '
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="c:\cygwin\bin\bash.exe -c &apos;/usr/bin/bison --verbose --debug -d `/usr/bin/realpath &quot;$(InputPath)&quot; ` &apos;"
+						CommandLine="c:\cygwin\bin\bash.exe -c &apos;/usr/bin/bison --verbose --debug -d `/usr/bin/realpath &quot;$(InputPath)&quot; ` &apos;&#x0D;&#x0A;"
+						AdditionalDependencies="$(ProjectDir)lex.yy.c"
+						Outputs="$(ProjectDir)$(InputName).tab.c;$(ProjectDir)$(InputName).tab.h;$(ProjectDir)$(InputName).output"
+					/>
