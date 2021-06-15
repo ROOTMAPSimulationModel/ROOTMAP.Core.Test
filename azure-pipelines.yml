@@ -19,9 +19,9 @@ steps:
 - checkout: self
   submodules: true
 
-- task: GitVersion@5
+- task: gitversion/setup@0
   inputs:
-    runtime: 'full'
+    versionSpec: '5.x'
 
 - task: NuGetToolInstaller@1
 
