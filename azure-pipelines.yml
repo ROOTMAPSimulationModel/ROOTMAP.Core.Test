@@ -23,6 +23,9 @@ steps:
   inputs:
     versionSpec: '5.x'
 
+- task: gitversion/execute@0
+  displayName: 'Determine version'
+
 - task: NuGetToolInstaller@1
 
 - task: PowerShell@2
