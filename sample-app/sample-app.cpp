@@ -8,5 +8,5 @@
 int main()
 {
     std::cout << "ROOTMAP.Core sample client application." << std::endl;
-    std::cout << "Library version: " << rootmapCoreVersion << std::endl;
+    std::cout << "Version: " << rootmapVersion << std::endl;
 }
